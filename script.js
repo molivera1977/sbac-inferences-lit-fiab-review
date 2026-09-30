@@ -56,6 +56,9 @@ function submitScorePartial() {
       tabSwitches:    tabSwitchCount,
       wrongQuestions: (app.missedQuestions||[]).map(m=>`[${m.id}] (${m.skill||'Unsorted'}) ${m.q}`).join(' | '),
       missedSkills:   skillTally(app.missedQuestions),
+      startedAt:      app.startedAt || '',
+      finishedAt:     app.finishedAt || '',
+      events:         JSON.stringify(app.events || []),
       timestamp:      new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })
     })
   }).catch(() => {});
@@ -83,6 +86,9 @@ function submitScoreFinal() {
       tabSwitches:    tabSwitchCount,
       wrongQuestions: (app.missedQuestions||[]).map(m=>`[${m.id}] (${m.skill||'Unsorted'}) ${m.q}`).join(' | '),
       missedSkills:   skillTally(app.missedQuestions),
+      startedAt:      app.startedAt || '',
+      finishedAt:     app.finishedAt || '',
+      events:         JSON.stringify(app.events || []),
       timestamp:      new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })
     })
   }).catch(() => {});
@@ -448,6 +454,21 @@ function renderStoryPanel(passage) {
 /* ══════════════════════════════════════════════════════
    APP OBJECT
 ══════════════════════════════════════════════════════ */
+/* ── SESSION EVENT LOG ───────────────────────────────
+   start · leave · return · resume · close · finish, each with the
+   on-task clock. elapsed is time ON TASK: the timer pauses while the
+   page is hidden and counts ticks, so a slept device cannot inflate it. */
+function logEvent(kind, extra) {
+  if (!app.events) app.events = [];
+  app.events.push(Object.assign({
+    at: new Date().toISOString(),
+    e:  kind,
+    q:  (app.currentIndex || 0) + 1,
+    on: app.timerSeconds || 0
+  }, extra || {}));
+  if (app.events.length > 200) app.events.splice(0, app.events.length - 200);
+}
+
 const app = {
 
   /* ── state ── */
@@ -674,6 +695,8 @@ const app = {
 
   /* ── START SESSION ── */
   startSession(form) {
+    this.events = []; this.startedAt = new Date().toISOString();
+    this.finishedAt = '';
     // Confetti from a previous perfect score keeps animating unless it is
     // stopped here. Home and Try Again both stop it, but "Review Another
     // Form" and a resume do not go through either, so a 0% end screen can
@@ -730,6 +753,7 @@ const app = {
         : '🔍 Teacher Review Mode — tap Next to advance';
     }
 
+    logEvent('start');
     this.startTimer();
     this._enterQuestion();
   },
@@ -859,6 +883,9 @@ const app = {
     this.missedQuestions = saved.missedQuestions || [];
     this.timerSeconds   = saved.timerSeconds || 0;
     this.currentAttemptNum = saved.currentAttemptNum || 1;
+    this.events = saved.events || [];
+    this.startedAt = saved.startedAt || new Date().toISOString();
+    logEvent('resume');
     this.startTimer();
     this._enterQuestion();
   },
@@ -874,7 +901,9 @@ const app = {
       streak:          this.streak,
       missedQuestions: this.missedQuestions,
       timerSeconds:    this.timerSeconds,
-      currentAttemptNum: this.currentAttemptNum
+      currentAttemptNum: this.currentAttemptNum,
+      events: this.events,
+      startedAt: this.startedAt
     }));
   },
 
@@ -1326,6 +1355,7 @@ const app = {
 
   /* ── FINISH SESSION ── */
   _finishSession() {
+    this.finishedAt = new Date().toISOString(); logEvent('finish');
     this.stopTimerEngine();
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(ILFIAB_SESSION_ID_KEY);
@@ -1657,6 +1687,7 @@ document.addEventListener('visibilitychange', () => {
   if (document.hidden) {
     if (!app.timerOn) return;
     tabSwitchCount++;
+    logEvent('leave');
     app.stopTimerEngine();
     app.saveProgress();
     if (app.instructInterval) { clearInterval(app.instructInterval); }
@@ -1665,6 +1696,7 @@ document.addEventListener('visibilitychange', () => {
   } else {
     if (!app._wasTimerRunning) return;
     app._wasTimerRunning = false;
+    logEvent('return');
     const warnBanner = document.getElementById('tab-warning-banner');
     if (warnBanner) warnBanner.classList.remove('hidden');
     app.stopTimerEngine();
@@ -1678,6 +1710,7 @@ document.addEventListener('visibilitychange', () => {
 });
 
 window.addEventListener('beforeunload', () => {
+  if (app.timerOn) logEvent('close');
   if (app.timerOn) app.saveProgress();
 });
 
