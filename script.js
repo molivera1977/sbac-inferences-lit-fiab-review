@@ -16,7 +16,7 @@
 ═══════════════════════════════════════════════════════ */
 
 /* ── CONFIG ─────────────────────────────────────────── */
-const REVIEW_OPEN   = false;  // false = students locked out; only Teacher Access works. Set true to open.
+const REVIEW_OPEN   = true;   // false = students locked out; only Teacher Access works. Set true to open.
 const INSTRUCT_SECS = 20;
 const PASSAGE_SECS  = 60;     // story screen lock — a 600-word story needs longer than a math item
 const READ_SECS     = 15;     // 3s longer than the math FIAB: these choices are whole sentences
