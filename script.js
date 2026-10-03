@@ -905,7 +905,7 @@ const app = {
       studentName:     this.studentName,
       currentForm:     this.currentForm,
       currentBank:     this.currentBank,
-      currentIndex:    this.currentIndex,
+      currentIndex:    this.questionLocked ? this.currentIndex + 1 : this.currentIndex, // answered → resume at the next one
       shownPassage:    this.shownPassage,
       score:           this.score,
       streak:          this.streak,
