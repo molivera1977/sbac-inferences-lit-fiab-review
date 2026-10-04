@@ -722,6 +722,7 @@ const app = {
     this.streak        = 0;
     this.missedQuestions = [];
     this.currentIndex  = 0;
+    this.questionLocked = false;   // a finished form leaves it set
     this.shownPassage  = -1;
     this.timerSeconds  = 0;
     // Fixed up front so the progress row and the final row share one
@@ -885,6 +886,7 @@ const app = {
     this.currentBank    = saved.currentBank;
     this.currentPassages = window['FORM_' + saved.currentForm].passages;
     this.currentIndex   = saved.currentIndex;
+    this.questionLocked = false;
     // Re-show the story screen on resume — a student coming back
     // cold needs the story again, and the gate makes that free.
     this.shownPassage   = -1;
@@ -1356,6 +1358,10 @@ const app = {
   nextQuestion() {
     stopActiveSpeech();
     this.currentIndex++;
+    // The answered item is behind us now. Left set, a save during the next
+    // story screen (30-second tick, tab hidden, page closed) would record
+    // currentIndex + 1 and the resume would skip that story's first item.
+    this.questionLocked = false;
     if (this.currentIndex >= this.currentBank.length) {
       this._finishSession();
     } else {
@@ -1701,7 +1707,7 @@ document.addEventListener('visibilitychange', () => {
     app.stopTimerEngine();
     app.saveProgress();
     if (app.instructInterval) { clearInterval(app.instructInterval); }
-    if (app.readInterval)     { clearInterval(app.readInterval); }
+    if (app.readInterval)     { clearInterval(app.readInterval); app.readInterval = null; app._readLockPaused = true; }
     app._wasTimerRunning = true;
   } else {
     if (!app._wasTimerRunning) return;
@@ -1716,6 +1722,9 @@ document.addEventListener('visibilitychange', () => {
       if (app.timerSeconds % 30 === 0) app.saveProgress();
     }, 1000);
     app.timerOn = true;
+    // The read lock stopped while the page was hidden; start it over so the
+    // answers unlock again (left alone they stayed locked until a refresh).
+    if (app._readLockPaused) { app._readLockPaused = false; app.startReadTimer(); }
   }
 });
 
