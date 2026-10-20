@@ -608,6 +608,18 @@ function logEvent(kind, extra) {
   if (app.events.length > 200) app.events.splice(0, app.events.length - 200);
 }
 
+/* ── PINNED FORM LABEL (form-label.js) ──────────────────
+   A big colored label pinned to the top of the test screens naming
+   the form or part this student is on, so Mr. O can read it from
+   across the room (Marcos 10/20). show() calls syncFormLabel(). */
+const FORM_LABEL_COLORS = { A: 'blue', B: 'purple', C: 'green' };
+function syncFormLabel(screenId) {
+  if (!window.FormLabel) return;
+  const f = app.currentForm;
+  if (!f || !['passage-screen', 'quiz-screen', 'end-screen'].includes(screenId)) return FormLabel.hide();
+  FormLabel.show('📖 Form ' + f, FORM_LABEL_COLORS[f] || 'slate');
+}
+
 const app = {
 
   /* ── state ── */
@@ -637,6 +649,7 @@ const app = {
     ['start-screen','readaloud-screen','directions-screen','passage-screen','quiz-screen','end-screen','scoreboard-screen']
       .forEach(s => document.getElementById(s).classList.add('hidden'));
     document.getElementById(id).classList.remove('hidden');
+    syncFormLabel(id);
     window.scrollTo(0, 0);   // every new screen starts at the top
     if (id !== 'quiz-screen') document.body.classList.remove('story-active');
     window.speechSynthesis.cancel();
