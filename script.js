@@ -18,7 +18,7 @@
 /* ── CONFIG ─────────────────────────────────────────── */
 const REVIEW_OPEN   = true;   // false = students locked out; only Teacher Access works. Set true to open.
 const SHARE_MODE    = !!window.SHARE_MODE;   // set by share.js — a visitor's link, never a student's
-const INSTRUCT_SECS = 20;
+const INSTRUCT_SECS = 15;
 const PASSAGE_SECS  = 60;     // story screen lock — a 600-word story needs longer than a math item
 const READ_SECS     = 15;     // 3s longer than the math FIAB: these choices are whole sentences
 const NEXT_SECS     = 8;
@@ -1141,7 +1141,7 @@ const app = {
     if (el) el.textContent = `${m}:${s}`;
   },
 
-  /* ── INSTRUCTIONS LOCK (20s) ── */
+  /* ── INSTRUCTIONS LOCK (15s) ── */
   startInstructionsTimer() {
     if (this.instructInterval) { clearInterval(this.instructInterval); this.instructInterval = null; }
     const btn   = document.getElementById('ready-btn');
