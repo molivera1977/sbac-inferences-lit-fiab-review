@@ -37,7 +37,7 @@ window.FORM_C = {
         "At forty seconds I reached for the curtain, and from inside the basket Lucia said, in a very calm voice, \"Don't.\"",
         "The music ended. The gym got quiet in that way a gym gets quiet.",
         "Forty seconds is not a long time unless you are standing in front of a curtain.",
-        "So I did the only thing I could think of. I walked out in front of the curtain and I told the audience about my grandmother's cat, who is nineteen years old and who once got stuck behind the dryer for a day and a half. I talked about that cat for four minutes. I have never been so aware of my own hands.",
+        "So I did the only thing I could think of. I walked out in front of the curtain and I told the audience about my grandmother's cat. She is nineteen years old and once got stuck behind the dryer for a day and a half. I talked about that cat for four minutes. I have never been so aware of my own hands.",
         "At some point behind me there was a sound like a bicycle falling over, and then the curtain moved, and then Lucia stepped out with the chain over her shoulder like a winner.",
         "The gym went up. The fifth graders stood. Somebody's dad whistled with two fingers.",
         "Ms. Adeyemi did not stand up. She was looking at the basket.",
@@ -118,7 +118,7 @@ window.FORM_C = {
         "\"You may keep the job,\" she said. \"You may not keep the voice.\"",
         "Woodpecker did not argue with her.",
         "So they took the ringing call away from him, and what they left him was his beak and the hard trunk of a tree.",
-        "And that is why, to this day, you will not hear a woodpecker call a warning across a valley. You will hear him knocking, over and over, on wood — a sound nobody can make up and nobody can fake, because the tree has to answer back.",
+        "And that is why, to this day, you will not hear a woodpecker call a warning across a valley. You will hear him knocking, over and over, on wood. It is a sound nobody can make up and nobody can fake, because the tree has to answer back.",
         "Squirrel was given nothing at all, which is what she asked for. She only asked that the warning belong to whoever actually looked."
       ]
     }
@@ -133,36 +133,36 @@ window.FORM_C = {
       q: "Which detail from the passage BEST supports the idea that Omar knows Lucia very well?",
       choices: [
         "\"I did not ask what the escape was. I asked when rehearsal started, because there is no version of this where I am not at rehearsal.\"",
-        "\"I have been in Lucia Ramos's class every year since first grade.\"",
+        "\"On the night of the show the gym was full and the folding chairs went all the way back to the doors.\"",
         "\"We practiced in her basement nine times.\"",
-        "\"In the car she told me the chain had caught on the handle.\""
+        "\"In the car she told me the chain had caught on the handle and she had spent two minutes and forty seconds working it loose with one finger.\""
       ],
       answer: "\"I did not ask what the escape was. I asked when rehearsal started, because there is no version of this where I am not at rehearsal.\"",
-      explanation: "Knowing someone well means you can predict them. Omar skips every question a stranger would ask, because he already knows how this ends — he will be at rehearsal. Being in her class since first grade explains HOW he knows her, but this line is where he shows it." },
+      explanation: "Knowing someone well means you can predict them. Omar skips every question a stranger would ask, because he already knows how this ends — he will be at rehearsal. The other choices tell you about the show, the practices, and what Lucia told him later, but none of them shows Omar predicting what Lucia will do." },
 
     // Item 2 — EBSR: theme + supporting detail
     { id: "C02", p: 0, type: "ebsr",
       partA: {
         q: "Part A — What is a THEME of the passage?",
         choices: [
-          "Standing by a friend can mean covering for them when their plan falls apart.",
-          "It is important to practice something many times before you perform it.",
-          "Talent shows are more trouble than they are worth.",
-          "You should never keep a secret from your partner."
+          "It is important to stand by a friend and help out when the friend's plan falls apart.",
+          "It is important to practice something many times before you perform it in front of people.",
+          "It is important to stay away from talent shows, because they are more trouble than they are worth.",
+          "It is important to share the prize with everyone who helped you win it."
         ],
-        answer: "Standing by a friend can mean covering for them when their plan falls apart.",
-        explanation: "The whole middle of the story is Omar buying Lucia time with a four-minute story about a cat. They did practice nine times and it still went wrong, so practice is not the lesson, and the story does not punish Lucia for keeping the trick secret — it ends with Omar signing on for next year." },
+        answer: "It is important to stand by a friend and help out when the friend's plan falls apart.",
+        explanation: "The whole middle of the story is Omar buying Lucia time with a four-minute story about a cat. They did practice nine times and it still went wrong, so practice is not the lesson. Ms. Adeyemi's words at the end are about the trick itself, not about what friends do for each other. And the story ends with Omar signing on for next year, not staying away." },
       partB: {
         q: "Part B — Which detail from the passage BEST supports the answer in Part A?",
         longChoices: true,
         choices: [
-          "\"So I did the only thing I could think of. I walked out in front of the curtain and I told the audience about my grandmother's cat.\"",
-          "\"We practiced in her basement nine times. Nine out of nine, she got out.\"",
-          "\"The gym went up. The fifth graders stood.\"",
-          "\"Under ACT it said: THE AMAZING ESCAPE.\""
+          "\"I walked out in front of the curtain and I told the audience about my grandmother's cat.\"",
+          "\"We practiced in her basement nine times. Nine out of nine, she got out. It was going to be fine.\"",
+          "\"The gym went up. The fifth graders stood. Somebody's dad whistled with two fingers.\"",
+          "\"She showed me the slot. Under ACT it said: THE AMAZING ESCAPE.\""
         ],
-        answer: "\"So I did the only thing I could think of. I walked out in front of the curtain and I told the audience about my grandmother's cat.\"",
-        explanation: "This is the covering itself — Omar steps in front of the curtain with nothing prepared so that Lucia has time. The cheering and the rehearsals are around that moment, not the moment itself." } },
+        answer: "\"I walked out in front of the curtain and I told the audience about my grandmother's cat.\"",
+        explanation: "This is the covering itself — Omar steps in front of the curtain with nothing prepared so that Lucia has time. The rehearsals, the cheering, and the sign-up sheet all come before or after that moment, not the moment itself." } },
 
     // Item 3 — EBSR: author's craft (a repeated line) + detail
     { id: "C03", p: 0, type: "ebsr",
@@ -180,26 +180,26 @@ window.FORM_C = {
         q: "Part B — Which detail from the passage BEST supports the answer in Part A?",
         longChoices: true,
         choices: [
-          "\"I have never been so aware of my own hands.\"",
-          "\"Nine out of nine, she got out.\"",
-          "\"Ms. Adeyemi announced us.\"",
+          "\"Forty seconds is not a long time unless you are standing in front of a curtain.\"",
+          "\"We practiced in her basement nine times. Nine out of nine, she got out.\"",
+          "\"On the night of the show the gym was full and the folding chairs went all the way back to the doors.\"",
           "\"Somebody's dad whistled with two fingers.\""
         ],
-        answer: "\"I have never been so aware of my own hands.\"",
-        explanation: "This is the proof that Omar is not fine at all — he is so nervous he can feel his own hands. It shows the second \"It was going to be fine\" was something he was telling himself, not something he believed." } },
+        answer: "\"Forty seconds is not a long time unless you are standing in front of a curtain.\"",
+        explanation: "This is Omar standing in front of the closed curtain while the music plays. Forty seconds should feel short, but to him it feels very long, so he is not fine at all. That shows the second \"It was going to be fine\" was something he was telling himself, not something he believed." } },
 
     // Item 4 — EBSR: character inference + supporting sentence
     { id: "C04", p: 0, type: "ebsr",
       partA: {
         q: "Part A — Based on the passage, how are Omar and Lucia DIFFERENT?",
         choices: [
-          "Lucia is comfortable not knowing how things will go, while Omar wants to know ahead of time.",
+          "Omar wants to know how the trick works, while Lucia is happy to keep it a secret.",
           "Lucia wants to be in the talent show, while Omar does not want to be in it at all.",
           "Lucia stays calm under pressure, while Omar panics and leaves the stage.",
           "Lucia cares what the fifth graders think, while Omar does not."
         ],
-        answer: "Lucia is comfortable not knowing how things will go, while Omar wants to know ahead of time.",
-        explanation: "Omar asks how the trick works twice and keeps asking; Lucia will not tell him and is fine with that. He does not refuse the show — he asks when rehearsal starts, twice — and he does not leave the stage in a panic; he walks out in front of the curtain on purpose." },
+        answer: "Omar wants to know how the trick works, while Lucia is happy to keep it a secret.",
+        explanation: "Omar asks how the trick works twice and keeps asking; Lucia will not tell him and is happy keeping it to herself. He does not refuse the show — he asks when rehearsal starts, twice — and he does not leave the stage in a panic; he walks out in front of the curtain on purpose." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
@@ -210,7 +210,7 @@ window.FORM_C = {
           "\"Lucia nodded like that was a compliment.\""
         ],
         answer: "\"'I know it's the trick. I'm asking how.'\"",
-        explanation: "Omar will not let the question go — he even tells her he understands it is a secret and asks anyway. That is the clearest picture of the difference, because Lucia's answer is that knowing would ruin his face." } },
+        explanation: "Omar will not let the question go — he even tells her he understands it is a secret and asks anyway. That is the clearest picture of the difference, because Lucia's answer is that his face would give the secret away." } },
 
     /* ── PASSAGE 2 · items 5–7 ── */
 
@@ -219,13 +219,13 @@ window.FORM_C = {
       partA: {
         q: "Part A — How does the narrator feel about the greenhouse by the END of the passage?",
         choices: [
-          "It is still her favorite place, but she no longer wants to be the only one in it.",
-          "She has decided she does not need the greenhouse anymore.",
-          "She is worried that Theo will take the greenhouse away from her.",
-          "She only likes the greenhouse because of the seeds her grandmother gave her."
+          "The narrator still loves the greenhouse but no longer wants to be the only one in it.",
+          "The narrator has decided that there is no need for the greenhouse anymore.",
+          "The narrator is worried that Theo will take the greenhouse away now that he has the key.",
+          "The narrator only likes the greenhouse because of the seeds from the tin box."
         ],
-        answer: "It is still her favorite place, but she no longer wants to be the only one in it.",
-        explanation: "Both halves are right there in the last three lines: she still eats in the greenhouse and it has not stopped being the warmest place, AND she leaves the door open so somebody can get in. She is not giving it up and she is not defending it." },
+        answer: "The narrator still loves the greenhouse but no longer wants to be the only one in it.",
+        explanation: "Both halves are right there in the last three lines: the narrator still eats in the greenhouse and it has not stopped being the warmest place, AND the narrator leaves the door open so somebody can get in. The narrator is not giving it up and is not guarding it from Theo." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
@@ -233,10 +233,10 @@ window.FORM_C = {
           "\"But I have started leaving the door open a little, so somebody can get in.\"",
           "\"Nobody at Halstead Elementary knows about the greenhouse, which is how I found it.\"",
           "\"I have been eating my lunch in there since the second week of school.\"",
-          "\"I am not lonely in there, or at least it is a different kind, the kind you choose.\""
+          "\"So I sit in the greenhouse with my sandwich and the warm glass and I am not lonely in there, or at least it is a different kind, the kind you choose.\""
         ],
         answer: "\"But I have started leaving the door open a little, so somebody can get in.\"",
-        explanation: "The open door is the change. At the start the whole point of the greenhouse was that nobody knew about it; by the end she is holding it open on purpose. The other three sentences all describe how she used it before Theo walked in." } },
+        explanation: "The open door is the change. At the start the whole point of the greenhouse was that nobody knew about it; by the end the narrator is holding the door open on purpose. The other three sentences all describe how the narrator used the greenhouse before Theo walked in." } },
 
     // Item 6 — evidence-selection MC, dialogue lines (curiosity)
     { id: "C06", p: 1, longChoices: true,
@@ -244,11 +244,11 @@ window.FORM_C = {
       choices: [
         "\"'What's in there?' … 'What kind?' … 'You don't know what your own seeds are?'\"",
         "\"'Mrs. Odell's. She had a stroke in September.' … 'Somebody has to do it or they die.'\"",
-        "\"'There's room in the back,' the boy said. 'Behind the tomatoes.'\"",
-        "\"He watered all eleven pots, slowly, checking each one.\""
+        "\"'There's room in the back,' the boy said. 'Behind the tomatoes. The light's bad but it's not nothing.'\"",
+        "\"He watered all eleven pots, slowly, checking each one, and he did not say anything else for a while, and somehow that was not uncomfortable.\""
       ],
       answer: "\"'What's in there?' … 'What kind?' … 'You don't know what your own seeds are?'\"",
-      explanation: "Curious means wanting to know more. Theo puts the water jug down mid-job and keeps asking about the tin box even after she says she does not know. Taking over Mrs. Odell's plants shows he is responsible, and offering the back row shows he is generous." },
+      explanation: "Curious means wanting to know more. Theo puts the water jug down in the middle of his job and keeps asking about the tin box, even after the narrator says, \"I don't know.\" Taking over Mrs. Odell's plants shows he is responsible, and offering the back row shows he is generous." },
 
     // Item 7 — main idea of ONE re-shown paragraph
     { id: "C07", p: 1,
@@ -257,13 +257,13 @@ window.FORM_C = {
         "The thing about a new school is that recess is the hardest twenty minutes of the day. Everybody out there already has somebody. You cannot join a game that started in kindergarten. So I sit in the greenhouse with my sandwich and the warm glass and I am not lonely in there, or at least it is a different kind, the kind you choose."
       ],
       choices: [
-        "She hides at recess because being alone on purpose hurts less than being left out.",
-        "The students at Halstead will not let her join their games.",
-        "Recess is too short for her to make any real friends.",
-        "She prefers being by herself and does not want friends at the new school."
+        "The narrator hides at recess because being alone on purpose hurts less than being left out.",
+        "The students at Halstead will not let the narrator join their games.",
+        "Recess is too short for the narrator to make any real friends.",
+        "The narrator prefers being alone and does not want friends at the new school."
       ],
-      answer: "She hides at recess because being alone on purpose hurts less than being left out.",
-      explanation: "\"The kind you choose\" is the key — she admits she is still lonely, just lonely on her own terms. Nobody turns her away; the problem is that the games started years ago. And the last line of the passage, where she props the door open, shows she does want somebody." },
+      answer: "The narrator hides at recess because being alone on purpose hurts less than being left out.",
+      explanation: "\"The kind you choose\" is the key. The narrator is still lonely, just lonely by choice. Nobody turns the narrator away; the problem is that the games started years ago. And the last line of the passage, where the narrator leaves the door open, shows the narrator does want somebody." },
 
     /* ── PASSAGE 3 · items 8–10 ── */
 
@@ -271,12 +271,12 @@ window.FORM_C = {
     { id: "C08", p: 2,
       q: "Which detail from the passage BEST supports the idea that Squirrel has great courage?",
       choices: [
-        "She runs down to the creek to warn the animals even though she has been afraid of the far side of the ridge all her life.",
+        "She runs to the creek to warn the others even though she is afraid the whole way.",
         "She is the first animal in the forest to look up when Woodpecker calls about the smoke.",
-        "She notices that the birds are going up off the ridge all at once.",
-        "She asks for nothing after the fire except that warnings belong to whoever looks."
+        "She notices that all of the birds are flying up off the ridge at the same time.",
+        "After the fire, she asks for no reward except that the warning belong to whoever actually looked."
       ],
-      answer: "She runs down to the creek to warn the animals even though she has been afraid of the far side of the ridge all her life.",
+      answer: "She runs to the creek to warn the others even though she is afraid the whole way.",
       explanation: "Courage is doing the frightening thing anyway — the passage even says she was \"afraid the whole way.\" Looking up and noticing the birds show that she pays attention, and refusing a reward afterward shows she is humble, but the brave act is the run." },
 
     // Item 9 — EBSR: theme + supporting sentence
@@ -284,30 +284,30 @@ window.FORM_C = {
       partA: {
         q: "Part A — What is a THEME of the passage?",
         choices: [
-          "Words lose their power when you use them carelessly.",
-          "It is important to forgive someone who has made a mistake.",
-          "Small animals can do things that large animals cannot.",
-          "It is important to stay away from danger you do not understand."
+          "It is important to use a warning carefully, because a warning that is wasted stops working.",
+          "It is important to forgive someone who has made a mistake and is sorry for it.",
+          "It is important to remember that small animals can do things that large animals cannot.",
+          "It is important to stay far away from any danger that you do not understand."
         ],
-        answer: "Words lose their power when you use them carelessly.",
-        explanation: "Badger says it plainly: \"A warning is not a toy. It only works the first time you waste it.\" By August nobody moves when Woodpecker calls, and the forest nearly burns because of it. He is not forgiven — he loses the voice — and Squirrel's size is never the point." },
+        answer: "It is important to use a warning carefully, because a warning that is wasted stops working.",
+        explanation: "Badger warns him: \"A warning is not a toy.\" Woodpecker wastes his warning call again and again for fun, so by the middle of the summer nobody moves when he calls, and the forest nearly burns because of it. He is not forgiven — he loses the voice — and Squirrel's size is never the point." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
         choices: [
-          "\"He called so many times that his voice went thin and scratchy, and still not one animal in that forest lifted its head, because they had all heard it forty times before and none of it had ever been true.\"",
+          "\"By the middle of the summer, nobody moved when Woodpecker called.\"",
           "\"Woodpecker laughed until he had to hold on to the branch with both feet.\"",
           "\"It was Squirrel who finally looked up.\"",
-          "\"The forest burned to the ridge line and stopped at the water.\""
+          "\"Woodpecker saw the smoke first, because a sentry sits high.\""
         ],
-        answer: "\"He called so many times that his voice went thin and scratchy, and still not one animal in that forest lifted its head, because they had all heard it forty times before and none of it had ever been true.\"",
-        explanation: "This is the moment the used-up warning stops working, and the sentence even gives the reason — forty false calls. Woodpecker laughing is the careless part, but this is where it costs something." } },
+        answer: "\"By the middle of the summer, nobody moved when Woodpecker called.\"",
+        explanation: "Woodpecker has wasted his warning so many times that nobody moves when he calls. That is the warning losing its power. Woodpecker laughing is the careless part, but this sentence is where it stops working." } },
 
     // Item 10 — EBSR: conclusion + supporting sentence, over a re-shown excerpt
     { id: "C10", p: 2, type: "ebsr",
       excerpt: [
         "So they took the ringing call away from him, and what they left him was his beak and the hard trunk of a tree.",
-        "And that is why, to this day, you will not hear a woodpecker call a warning across a valley. You will hear him knocking, over and over, on wood — a sound nobody can make up and nobody can fake, because the tree has to answer back.",
+        "And that is why, to this day, you will not hear a woodpecker call a warning across a valley. You will hear him knocking, over and over, on wood. It is a sound nobody can make up and nobody can fake, because the tree has to answer back.",
         "Squirrel was given nothing at all, which is what she asked for. She only asked that the warning belong to whoever actually looked."
       ],
       partA: {
@@ -324,12 +324,12 @@ window.FORM_C = {
         q: "Part B — Which sentence from the paragraphs above BEST supports the answer in Part A?",
         longChoices: true,
         choices: [
-          "\"You will hear him knocking, over and over, on wood — a sound nobody can make up and nobody can fake, because the tree has to answer back.\"",
-          "\"So they took the ringing call away from him.\"",
+          "\"It is a sound nobody can make up and nobody can fake, because the tree has to answer back.\"",
+          "\"And that is why, to this day, you will not hear a woodpecker call a warning across a valley.\"",
           "\"Squirrel was given nothing at all, which is what she asked for.\"",
           "\"She only asked that the warning belong to whoever actually looked.\""
         ],
-        answer: "\"You will hear him knocking, over and over, on wood — a sound nobody can make up and nobody can fake, because the tree has to answer back.\"",
+        answer: "\"It is a sound nobody can make up and nobody can fake, because the tree has to answer back.\"",
         explanation: "This is the sentence that explains WHY the new sound fits the crime — it cannot be faked. Losing the call tells you he was punished; only this line tells you the punishment was matched to what he did wrong." } }
 
   ]

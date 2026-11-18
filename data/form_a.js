@@ -25,7 +25,7 @@ window.FORM_A = {
       genre: "Realistic fiction",
       paragraphs: [
         "My best friend Dante has exactly one speed, and that speed is FULL. So when Ms. Okafor said our science fair projects were due Friday, I already knew what was coming.",
-        "\"Arizona,\" he said, using my whole name the way he does when he has an idea, \"we are going to build a volcano.\"",
+        "\"Cameron,\" he said, using my whole name the way he does when he has an idea, \"we are going to build a volcano.\"",
         "\"Everybody builds a volcano,\" I said.",
         "\"Not like ours.\" He held up his hands about a yard apart. \"Ours is going to be THIS tall.\"",
         "I have known Dante since kindergarten, so I did not argue. I just went and got the newspaper, the flour, and the bucket, because I knew we would need all three before the afternoon was over.",
@@ -82,9 +82,9 @@ window.FORM_A = {
         "I talked for a long time. Longer than I had talked to anybody in Millbrook, including my mother.",
         "She did not look at the clock once.",
         "When the bell rang she stacked her tray on mine, which nobody has to do and nobody does.",
-        "\"I'm Meera,\" she said. \"I sit at table four. There's an open seat.\"",
+        "\"I'm Nadia,\" she said. \"I sit at table four. There's an open seat.\"",
         "I carried my notebook to math with both hands. Outside the window the parking lot was gray and there was not one single water tower anywhere in Millbrook, Ohio.",
-        "But the cafeteria, when I thought about it at my desk, had felt warm for the first time since August."
+        "But the cafeteria, when I thought about it at my desk, felt a little less like somebody else's room."
       ]
     },
 
@@ -99,7 +99,7 @@ window.FORM_A = {
       note: "A pourquoi tale is a story that explains how something in nature came to be the way it is.",
       footnotes: [
         { word: "quarrel", meaning: "an argument" },
-        { word: "brandishing", meaning: "waving something around in the air" }
+        { word: "taunting", meaning: "teasing someone in a mean way" }
       ],
       paragraphs: [
         "Long ago, when the marsh was young, every creature in it talked at once.",
@@ -115,7 +115,7 @@ window.FORM_A = {
         "Kingfisher laughed so hard he fell off his branch. \"You? You have legs like reeds. The channel will take you in one breath.\"",
         "\"Then hold my feathers,\" said Heron, \"and do not let go.\"",
         "She walked into the channel. The cold went up her legs like a knife and the current pushed her sideways, but Heron did not hurry and Heron did not thrash. She set one foot. She waited. She set the other foot. She waited again.",
-        "Otter shouted advice from the bank the whole time. Frog shouted the opposite advice. Kingfisher shouted that she was doing it wrong, brandishing a stick at her from the safety of the shore.",
+        "Otter shouted advice from the bank the whole time. Frog shouted the opposite advice. Kingfisher shouted that she was doing it wrong, taunting her from the safety of the shore.",
         "Heron did not answer any of them. Answering costs a breath, and she needed every breath she had.",
         "For a long time nothing happened. The marsh got bored and began to argue about something else.",
         "Then Heron bent her long neck under the water, and when she came up, Old Turtle was in her beak, muddy and furious and entirely alive.",
@@ -142,52 +142,52 @@ window.FORM_A = {
 
     // Item 1 — evidence-selection MC over passage excerpts
     { id: "A01", p: 0, longChoices: true,
-      q: "Which detail from the passage BEST supports the idea that Arizona knows Dante very well?",
+      q: "Which detail from the passage BEST supports the idea that Cameron understands Dante very well?",
       choices: [
         "\"I have known Dante since kindergarten, so I did not argue. I just went and got the newspaper, the flour, and the bucket, because I knew we would need all three before the afternoon was over.\"",
-        "\"My best friend Dante has exactly one speed, and that speed is FULL.\"",
-        "\"We built the mountain in his garage out of chicken wire and paste.\"",
-        "\"Dante read it twice. Then he folded the paper into his pocket like it was money.\""
+        "\"We built the mountain in his garage out of chicken wire and paste. It took two days and it looked amazing — gray and lumpy with little plastic trees stuck to the bottom.\"",
+        "\"Dante poured in the vinegar. For about one second, nothing happened. Then the volcano made a sound like a truck clearing its throat, and a column of orange foam shot straight up and hit the bottom of the scoreboard.\"",
+        "\"The custodian came by with a second mop, looked at all the orange, and told us he had seen worse. I did not believe him, but it was a kind thing to say.\""
       ],
       answer: "\"I have known Dante since kindergarten, so I did not argue. I just went and got the newspaper, the flour, and the bucket, because I knew we would need all three before the afternoon was over.\"",
-      explanation: "Knowing someone well means you can predict what they will do. Arizona gathers the supplies before Dante even asks, because she already knows how the afternoon will go. The line about \"one speed\" tells you what Dante is like, but it does not show Arizona predicting him — and the other two choices are just things that happen." },
+      explanation: "Understanding someone well means you can guess what they will do. Cameron gets the supplies before Dante even asks, because Cameron already knows how the afternoon will go. The other choices tell you what they built, what happened at the fair, and what the custodian said, but none of them shows Cameron guessing what Dante will do." },
 
     // Item 2 — EBSR: theme + supporting detail
     { id: "A02", p: 0, type: "ebsr",
       partA: {
         q: "Part A — What is a THEME of the passage?",
         choices: [
-          "Being excited about something can matter more to a person than doing it correctly.",
-          "Friends should always agree with each other's plans.",
-          "Science projects are usually more trouble than they are worth.",
-          "It is important to follow directions exactly as they are written."
+          "It is important to enjoy what you do, even when it does not turn out the way you planned.",
+          "It is important to share what you have, even when you do not have very much.",
+          "It is important to be a good sport and cheer when another team wins the prize.",
+          "It is important to be patient and wait for your turn when you work in a group."
         ],
-        answer: "Being excited about something can matter more to a person than doing it correctly.",
-        explanation: "Dante uses six boxes instead of one, wrecks the gym, and still keeps the grade sheet like it is money. The story never punishes his excitement or tells you rules matter most — Arizona even starts planning next year's project. So the theme is about excitement mattering more to him than doing it the right way." },
+        answer: "It is important to enjoy what you do, even when it does not turn out the way you planned.",
+        explanation: "The volcano floods the gym, and the two friends spend all of recess mopping. But Dante hums while he mops, keeps the grade sheet like it is money, and says unexpected results are the whole point of science. Cameron is already planning next year's project. Nothing in the story is about sharing, cheering for another team, or waiting your turn." },
       partB: {
         q: "Part B — Which detail from the passage BEST supports the answer in Part A?",
         longChoices: true,
         choices: [
           "\"Dante mopped and hummed. He did not seem sorry even a little bit.\"",
-          "\"The instructions say one.\"",
+          "\"The poster about worms went down in the first wave.\"",
           "\"We spent all of recess cleaning the gym floor with a mop that was taller than both of us.\"",
           "\"Ms. Okafor came by with her clipboard and asked us to demonstrate.\""
         ],
         answer: "\"Dante mopped and hummed. He did not seem sorry even a little bit.\"",
-        explanation: "Humming while he cleans up the mess, with no regret at all, shows the excitement still matters more to Dante than the fact that it went wrong. The other choices describe the rule he broke or the mess itself, not how he feels about it." } },
+        explanation: "Humming while he cleans up the mess shows that Dante is still enjoying himself, even though the project did not go the way he planned. The other choices show the mess or the clean up, but not how anyone feels about it." } },
 
     // Item 3 — EBSR: author's craft (quotation marks / irony) + detail
     { id: "A03", p: 0, type: "ebsr",
       partA: {
-        q: "Part A — Read this sentence from the passage: \"I want to be clear that I said something. I said, 'Dante, I think that is too much.' I said it out loud, with my mouth, in the garage. I want that written down somewhere.\" Why does the author include the words \"with my mouth\" and \"I want that written down somewhere\"?",
+        q: "Part A — Read these sentences from the passage: \"I want to be clear that I said something. I said, 'Dante, I think that is too much.' I said it out loud, with my mouth, in the garage. I want that written down somewhere.\" Why does the author include the words \"with my mouth\" and \"I want that written down somewhere\"?",
         choices: [
-          "To show in a funny way that Arizona wants credit for warning Dante",
-          "To show that Arizona is not sure whether she really spoke",
-          "To explain that Arizona keeps a diary about Dante",
-          "To show that Arizona is afraid of getting in trouble with Ms. Okafor"
+          "To show in a funny way that Cameron wants credit for warning Dante",
+          "To show that Cameron is not sure about having spoken out loud",
+          "To explain that Cameron keeps a diary about Dante",
+          "To show that Cameron is afraid of getting in trouble with Ms. Okafor"
         ],
-        answer: "To show in a funny way that Arizona wants credit for warning Dante",
-        explanation: "Nobody needs to explain that they spoke \"with my mouth.\" The author piles on extra words on purpose so it sounds like Arizona is giving testimony — it is a joke that shows how badly she wants it on the record that the disaster was not her idea." },
+        answer: "To show in a funny way that Cameron wants credit for warning Dante",
+        explanation: "Nobody needs to explain that they spoke \"with my mouth.\" The author piles on extra words on purpose so it sounds like Cameron is speaking to a judge in court. It is a joke that shows how badly Cameron wants everyone to know the disaster was somebody else's idea." },
       partB: {
         q: "Part B — Which detail from the passage BEST supports the answer in Part A?",
         longChoices: true,
@@ -198,31 +198,31 @@ window.FORM_A = {
           "\"Dante poured in the vinegar.\""
         ],
         answer: "\"'Six?' I said. 'The instructions say one.'\"",
-        explanation: "This is the warning itself — the thing Arizona wants credit for. It is the detail that proves she really did object before Dante poured the vinegar. The other three all happen without showing that she said anything." } },
+        explanation: "This is the warning itself — the thing Cameron wants credit for. It is the detail that proves Cameron really did object before Dante poured the vinegar. The other three all happen without showing that Cameron said anything." } },
 
     // Item 4 — EBSR: character inference + supporting sentence
     { id: "A04", p: 0, type: "ebsr",
       partA: {
-        q: "Part A — Based on the passage, how are Arizona and Dante DIFFERENT?",
+        q: "Part A — Based on the passage, how are Cameron and Dante DIFFERENT?",
         choices: [
-          "Arizona thinks about what might go wrong, while Dante thinks only about how big it could be.",
-          "Arizona cares about winning the science fair, while Dante does not care about science.",
-          "Arizona does most of the work, while Dante watches her do it.",
-          "Arizona is embarrassed by Dante, while Dante is embarrassed by Arizona."
+          "Cameron thinks about what might go wrong, while Dante thinks only about how big it could be.",
+          "Cameron cares about winning a ribbon at the science fair, while Dante does not care about science at all.",
+          "Cameron does most of the work, while Dante sits and watches the whole time.",
+          "Cameron is embarrassed by Dante, while Dante is embarrassed by Cameron."
         ],
-        answer: "Arizona thinks about what might go wrong, while Dante thinks only about how big it could be.",
-        explanation: "Arizona counts the boxes, reads the instructions, and warns him. Dante measures the volcano with his hands and says instructions are \"for people who are not committed.\" Both of them work hard and neither one is embarrassed — she is planning next year's project with him." },
+        answer: "Cameron thinks about what might go wrong, while Dante thinks only about how big it could be.",
+        explanation: "Cameron measures the base twice so the volcano will fit on the table, reads the instructions, and warns Dante about the six boxes. Dante measures nothing and keeps saying the volcano needs to be taller. Both of them work hard and neither one is embarrassed — Cameron is planning next year's project with him." },
       partB: {
-        q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
+        q: "Part B — Which detail from the passage BEST supports the answer in Part A?",
         longChoices: true,
         choices: [
-          "\"'The instructions,' Dante said, 'are for people who are not committed.'\"",
-          "\"He held up his hands about a yard apart.\"",
+          "\"I measured the base twice so it would fit on a cafeteria table. Dante measured nothing.\"",
+          "\"The custodian came by with a second mop, looked at all the orange, and told us he had seen worse.\"",
           "\"Dante painted a tiny town at the base and named every single house.\"",
-          "\"Ms. Okafor looked down at her shoes for a long time.\""
+          "\"Ms. Okafor looked down at her shoes for a long time. Then she looked up at the scoreboard, which was dripping.\""
         ],
-        answer: "\"'The instructions,' Dante said, 'are for people who are not committed.'\"",
-        explanation: "In one line Dante says out loud that following the directions is for other people. That is the clearest proof of the difference between them, because Arizona is the one holding the directions." } },
+        answer: "\"I measured the base twice so it would fit on a cafeteria table. Dante measured nothing.\"",
+        explanation: "These two sentences show both friends at once. Cameron measures twice to make sure the volcano will fit, which is thinking ahead about what could go wrong. Dante measures nothing at all. The other choices are about the custodian, the tiny town, or the teacher, not about how the two friends are different." } },
 
     /* ── PASSAGE 2 · items 5–7 ── */
 
@@ -231,36 +231,36 @@ window.FORM_A = {
       partA: {
         q: "Part A — How does the narrator feel about Millbrook by the END of the passage?",
         choices: [
-          "She still misses Chicago, but Millbrook feels less lonely than it did.",
-          "She has decided that Millbrook is better than Chicago.",
-          "She is angry that her family moved and wants to go back.",
-          "She no longer thinks about Chicago at all."
+          "The narrator still misses Chicago, but Millbrook feels less lonely than it did.",
+          "The narrator has decided that Millbrook is better than Chicago.",
+          "The narrator is angry that the family moved and wants to go back to Chicago.",
+          "The narrator no longer thinks about Chicago at all."
         ],
-        answer: "She still misses Chicago, but Millbrook feels less lonely than it did.",
-        explanation: "Both halves have to be true. She points out that there is \"not one single water tower anywhere in Millbrook,\" so Chicago is still on her mind — and she says the cafeteria \"felt warm for the first time since August.\" The feeling changed; it did not flip all the way over." },
+        answer: "The narrator still misses Chicago, but Millbrook feels less lonely than it did.",
+        explanation: "Both halves have to be true. The narrator points out that there is \"not one single water tower anywhere in Millbrook,\" so Chicago is still on the narrator's mind. But the cafeteria now feels \"a little less like somebody else's room.\" The feeling changed; it did not flip all the way over." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
         choices: [
-          "\"But the cafeteria, when I thought about it at my desk, had felt warm for the first time since August.\"",
-          "\"In Millbrook the cafeteria has eleven tables and I have counted them all.\"",
+          "\"But the cafeteria, when I thought about it at my desk, felt a little less like somebody else's room.\"",
+          "\"In Millbrook the cafeteria has eleven tables and I have counted them all, because for three weeks I have been eating at the end of table nine by myself.\"",
           "\"Mom keeps asking how school is going. I keep saying fine.\"",
-          "\"I have a notebook with a black cover and I draw the same thing over and over.\""
+          "\"It is not that anybody is mean here. Nobody is anything here.\""
         ],
-        answer: "\"But the cafeteria, when I thought about it at my desk, had felt warm for the first time since August.\"",
-        explanation: "\"For the first time since August\" is the proof that something changed — the cafeteria did not feel that way before Meera sat down. The other three sentences all describe how lonely she was earlier in the passage." } },
+        answer: "\"But the cafeteria, when I thought about it at my desk, felt a little less like somebody else's room.\"",
+        explanation: "\"A little less like somebody else's room\" is the proof that something changed. Before Nadia sat down, the cafeteria was a place where the narrator ate alone at table nine. The other three sentences all describe how lonely the narrator was earlier in the passage." } },
 
     // Item 6 — evidence-selection MC, dialogue lines (curiosity)
     { id: "A06", p: 1, longChoices: true,
-      q: "Which detail from the passage BEST supports the idea that Meera is CURIOUS?",
+      q: "Which detail from the passage BEST supports the idea that Nadia is CURIOUS?",
       choices: [
         "\"'Why is it on the roof? Isn't that heavy?' … 'Do they fill it with a hose or does the rain do it?'\"",
-        "\"'I'm Meera,' she said. 'I sit at table four. There's an open seat.'\"",
+        "\"'I'm Nadia,' she said. 'I sit at table four. There's an open seat.'\"",
         "\"It was the girl who sits two rows over in math, the one with the enormous green backpack.\"",
         "\"When the bell rang she stacked her tray on mine, which nobody has to do and nobody does.\""
       ],
       answer: "\"'Why is it on the roof? Isn't that heavy?' … 'Do they fill it with a hose or does the rain do it?'\"",
-      explanation: "Curious means wanting to know more. Meera keeps asking questions even after the narrator says \"I don't know\" twice. The invitation and the stacked tray show she is friendly, and the backpack line is just how the narrator recognizes her." },
+      explanation: "Curious means wanting to know more. Nadia keeps asking questions even after the narrator says \"I don't know\" twice. The invitation and the stacked tray show she is friendly, and the backpack line is just how the narrator recognizes her." },
 
     // Item 7 — main idea of ONE re-shown paragraph
     { id: "A07", p: 1,
@@ -275,7 +275,7 @@ window.FORM_A = {
         "Hallways are a hard place to make new friends."
       ],
       answer: "Being treated politely but never included is its own kind of lonely.",
-      explanation: "The paragraph starts by saying nobody is mean, so \"unkind\" is the opposite of the point. \"Nobody is anything here\" is the heart of it: people are polite and then keep walking, and that in-between is what hurts. The hallway is only the example, not the idea." },
+      explanation: "The paragraph starts by saying nobody is mean, so \"unkind\" is the opposite of the point. \"Nobody is anything here\" is the heart of it: people are polite and then keep walking, and that in-between is what hurts. The narrator is not asking to be ignored; the point is that a quick \"hey\" with nothing after it hurts more. The hallway is only the example, not the idea." },
 
     /* ── PASSAGE 3 · items 8–10 ── */
 
@@ -302,24 +302,24 @@ window.FORM_A = {
           "It is important to work together when a friend is in danger."
         ],
         answer: "It is important to listen, because the loudest voices often miss what matters.",
-        explanation: "Old Turtle says it directly: \"You could all hear the same water. Only one of you was listening to it.\" Heron never argues back to defend herself, and the other animals never help — they shout from the bank. The story is about listening, not speaking up or teamwork." },
+        explanation: "Heron is the only one who hears Old Turtle go down, because everyone else is too busy talking. At the end Old Turtle says so himself. Heron never argues back to defend herself, and the other animals never help — they shout from the bank. The story is about listening, not speaking up or teamwork." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
         choices: [
-          "\"But Heron had been listening, and she had heard something the others had talked straight over: three days ago, a sound like a small stone going down.\"",
+          "\"'You could all hear the same water,' he said. 'Only one of you was listening to it.'\"",
           "\"Kingfisher laughed so hard he fell off his branch.\"",
           "\"'Then hold my feathers,' said Heron, 'and do not let go.'\"",
-          "\"The cold went up her legs like a knife and the current pushed her sideways.\""
+          "\"The cold went up her legs like a knife and the current pushed her sideways, but Heron did not hurry and Heron did not thrash.\""
         ],
-        answer: "\"But Heron had been listening, and she had heard something the others had talked straight over: three days ago, a sound like a small stone going down.\"",
-        explanation: "This sentence shows both halves of the theme at once: Heron listened and caught the important sound, and the others \"talked straight over\" it. The rest are about Kingfisher's rudeness or how hard the rescue was." } },
+        answer: "\"'You could all hear the same water,' he said. 'Only one of you was listening to it.'\"",
+        explanation: "Old Turtle says the theme out loud: all the animals could hear the water, but only Heron was really listening. The other choices are about Kingfisher's rudeness, what Heron asks for, or how hard the rescue was. None of them is about listening." } },
 
     // Item 10 — EBSR: conclusion + supporting sentence, over a re-shown excerpt
     { id: "A10", p: 2, type: "ebsr",
       excerpt: [
         "She walked into the channel. The cold went up her legs like a knife and the current pushed her sideways, but Heron did not hurry and Heron did not thrash. She set one foot. She waited. She set the other foot. She waited again.",
-        "Otter shouted advice from the bank the whole time. Frog shouted the opposite advice. Kingfisher shouted that she was doing it wrong, brandishing a stick at her from the safety of the shore.",
+        "Otter shouted advice from the bank the whole time. Frog shouted the opposite advice. Kingfisher shouted that she was doing it wrong, taunting her from the safety of the shore.",
         "Heron did not answer any of them. Answering costs a breath, and she needed every breath she had.",
         "For a long time nothing happened. The marsh got bored and began to argue about something else."
       ],
@@ -339,11 +339,11 @@ window.FORM_A = {
         choices: [
           "\"Heron did not answer any of them. Answering costs a breath, and she needed every breath she had.\"",
           "\"For a long time nothing happened.\"",
-          "\"Kingfisher shouted that she was doing it wrong, brandishing a stick at her from the safety of the shore.\"",
-          "\"The cold went up her legs like a knife and the current pushed her sideways.\""
+          "\"Kingfisher shouted that she was doing it wrong, taunting her from the safety of the shore.\"",
+          "\"Otter shouted advice from the bank the whole time.\""
         ],
         answer: "\"Heron did not answer any of them. Answering costs a breath, and she needed every breath she had.\"",
-        explanation: "This is the sentence that explains the choice: not answering is deliberate, and the reason given is that she needs every breath. The others describe the noise around her or the cold, without showing what she chose to do about it." } }
+        explanation: "This is the sentence that explains the choice: not answering is deliberate, and the reason given is that she needs every breath. The others describe the shouting around her or the long wait, without showing what she chose to do about it." } }
 
   ]
 };

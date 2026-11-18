@@ -18,14 +18,14 @@ window.FORM_B = {
       genre: "Realistic fiction",
       paragraphs: [
         "The class turtle needed a new tank, the new tank cost ninety dollars, and Beatriz Salas had a system.",
-        "Beatriz always has a system. In September her system for remembering her homework involved three rubber bands and a bell. I have sat next to her since the first day of fourth grade and I have learned to ask exactly one question, which is: how much of this is going to happen to me?",
+        "Beatriz always has a system. In September her system for remembering her homework involved three rubber bands and a bell. I have sat next to her since the first day of fourth grade. I have learned to ask exactly one question, which is: how much of this is going to happen to me?",
         "\"A car wash,\" she said at recess, and unfolded a piece of paper on the blacktop. There was a drawing on it. There were arrows.",
         "\"Saturday. My uncle's driveway. Five dollars a car. Eighteen cars and Shelldon gets his tank.\"",
         "\"Beatriz, your uncle's driveway is on a hill.\"",
         "\"That's the whole system, Jonah,\" she said, tapping the arrows. \"Gravity does the rinsing. We just do the soap.\"",
         "I want it on the record that I looked at that hill on Friday afternoon. I stood at the top of it and I looked all the way down to the street, and I said, \"Beatriz, the water is going to go somewhere.\"",
         "\"The water,\" she said, \"is going to go DOWN. That is what water does. That is why it is a system.\"",
-        "Saturday started fine. We hung a bedsheet sign on the mailbox. Beatriz had two buckets, four sponges, a hose, and what she called a \"waterproof\" plan, which turned out to mean a plan she had written in marker on a paper towel.",
+        "Saturday started fine. We hung a bedsheet sign on the mailbox. Beatriz had two buckets, four sponges, a hose, and what she called a \"waterproof\" plan. It turned out she had written the plan in marker on a paper towel.",
         "She put me at the top of the driveway with the hose and took the money herself, because, she said, I have a face that gives discounts.",
         "The first three cars went great. The fourth car was Mr. Pilar's minivan, and Mr. Pilar likes things clean, so Beatriz turned the hose all the way up.",
         "Here is the thing about a hill. The soapy water from the minivan ran down past car five. It ran under car six. It kept going, out of the driveway, across the sidewalk, and into the street, and then it just kept on going down Ellis Street in a long white river with sponges floating in it.",
@@ -128,26 +128,26 @@ window.FORM_B = {
     { id: "B01", p: 0, longChoices: true,
       q: "Which detail from the passage BEST supports the idea that Jonah knows Beatriz very well?",
       choices: [
-        "\"I have sat next to her since the first day of fourth grade and I have learned to ask exactly one question, which is: how much of this is going to happen to me?\"",
-        "\"Beatriz always has a system.\"",
-        "\"Beatriz ran down the hill after the sponges. I ran after Beatriz.\"",
-        "\"We got eleven cars. Fifty-five dollars.\""
+        "\"I have learned to ask exactly one question, which is: how much of this is going to happen to me?\"",
+        "\"'A car wash,' she said at recess, and unfolded a piece of paper on the blacktop. There was a drawing on it. There were arrows.\"",
+        "\"A man pushing a stroller stopped and let the whole thing go by. He looked at me. I looked at the sky.\"",
+        "\"We got eleven cars. Fifty-five dollars. Beatriz counted it twice on the curb with her shoes soaked through.\""
       ],
-      answer: "\"I have sat next to her since the first day of fourth grade and I have learned to ask exactly one question, which is: how much of this is going to happen to me?\"",
-      explanation: "Knowing someone well means you can predict them. Jonah has learned from experience exactly what to expect, and he already assumes her plan will pull him into it. \"Beatriz always has a system\" describes her, but it does not show what Jonah has learned about her." },
+      answer: "\"I have learned to ask exactly one question, which is: how much of this is going to happen to me?\"",
+      explanation: "Knowing someone well means you can predict them. Jonah has learned from experience exactly what to expect, and he already guesses that her plan will pull him into it. The other choices tell you what happened before and during the car wash, but they do not show what Jonah has learned about Beatriz." },
 
     // Item 2 — EBSR: theme + supporting detail
     { id: "B02", p: 0, type: "ebsr",
       partA: {
         q: "Part A — What is a THEME of the passage?",
         choices: [
-          "Being confident about a plan is not the same as having a plan that works.",
-          "It is important to raise money for your classroom pets.",
-          "You should never try something new if it might fail.",
-          "Good friends always talk each other out of bad ideas."
+          "It is important to remember that being sure of a plan is not the same as having a plan that works.",
+          "It is important to raise money for a class pet, even if it takes many weekends to do it.",
+          "It is important to never try something new when there is any chance that it might fail.",
+          "It is important to have a friend who will always talk you out of your bad ideas."
         ],
-        answer: "Being confident about a plan is not the same as having a plan that works.",
-        explanation: "Ms. Reyes says it almost word for word: \"a good plan and a good idea are not the same thing.\" Beatriz is completely confident, calls it a system, and the water still goes down Ellis Street. The story is not warning you off new ideas — Beatriz starts a new one in the last line." },
+        answer: "It is important to remember that being sure of a plan is not the same as having a plan that works.",
+        explanation: "Ms. Reyes says it almost word for word: \"a good plan and a good idea are not the same thing.\" Beatriz is completely sure, calls it a system, and the water still goes down Ellis Street. Jonah never does talk her out of it. And the story is not warning you off new ideas — Beatriz starts a new one in the last line." },
       partB: {
         q: "Part B — Which detail from the passage BEST supports the answer in Part A?",
         longChoices: true,
@@ -158,12 +158,12 @@ window.FORM_B = {
           "\"Beatriz counted it twice on the curb with her shoes soaked through.\""
         ],
         answer: "\"'The water,' she said, 'is going to go DOWN. That is what water does. That is why it is a system.'\"",
-        explanation: "Here is the confidence and the flaw in the same breath. She is completely sure, and the very thing she is sure about — water running downhill — is what wrecks the car wash. The neighbor and the sponges show the result, not the idea behind it." } },
+        explanation: "Here is the confidence and the flaw in the same breath. She is completely sure, and the very thing she is sure about — water running downhill — is what wrecks the car wash. The sign, the neighbor, and the soaked shoes show what happened, not the idea behind it." } },
 
     // Item 3 — EBSR: author's craft (quotation marks = irony) + detail
     { id: "B03", p: 0, type: "ebsr",
       partA: {
-        q: "Part A — Read this sentence from the passage: \"Beatriz had two buckets, four sponges, a hose, and what she called a 'waterproof' plan, which turned out to mean a plan she had written in marker on a paper towel.\" Why does the author put quotation marks around the word waterproof?",
+        q: "Part A — Read this sentence from the passage: \"Beatriz had two buckets, four sponges, a hose, and what she called a 'waterproof' plan.\" Why does the author put quotation marks around the word waterproof?",
         choices: [
           "To show that the plan was the opposite of waterproof",
           "To show that Beatriz invented the word herself",
@@ -171,17 +171,17 @@ window.FORM_B = {
           "To show that the plan was the most important part of the system"
         ],
         answer: "To show that the plan was the opposite of waterproof",
-        explanation: "The quotation marks mean the narrator does not believe the word. He hands it back to you and then tells you the plan was written in marker on a paper towel — which is about the least waterproof thing there is. That is the joke." },
+        explanation: "The quotation marks mean the narrator does not believe the word. He hands it back to you, and in the very next sentence he tells you the plan was written in marker on a paper towel — which is about the least waterproof thing there is. That is the joke." },
       partB: {
         q: "Part B — Which detail from the passage BEST supports the answer in Part A?",
         longChoices: true,
         choices: [
-          "\"…which turned out to mean a plan she had written in marker on a paper towel.\"",
+          "\"It turned out she had written the plan in marker on a paper towel.\"",
           "\"The first three cars went great.\"",
-          "\"Mr. Pilar likes things clean, so Beatriz turned the hose all the way up.\"",
+          "\"The fourth car was Mr. Pilar's minivan, and Mr. Pilar likes things clean, so Beatriz turned the hose all the way up.\"",
           "\"Beatriz always has a system.\""
         ],
-        answer: "\"…which turned out to mean a plan she had written in marker on a paper towel.\"",
+        answer: "\"It turned out she had written the plan in marker on a paper towel.\"",
         explanation: "This is the part that proves the word was not true. Marker on a paper towel is destroyed by water, so calling the plan waterproof is exactly backwards — and the author lets you notice that yourself." } },
 
     // Item 4 — EBSR: character inference + supporting sentence
@@ -189,24 +189,24 @@ window.FORM_B = {
       partA: {
         q: "Part A — Based on the passage, how are Jonah and Beatriz DIFFERENT?",
         choices: [
-          "Jonah notices the problem ahead of time, while Beatriz trusts the plan no matter what.",
+          "Jonah notices the problem ahead of time, while Beatriz trusts the plan even after Jonah warns her.",
           "Jonah wants to help the class turtle, while Beatriz only wants attention.",
           "Jonah works hard at the car wash, while Beatriz gives up when it goes wrong.",
           "Jonah is angry at Beatriz by the end, while Beatriz does not notice."
         ],
-        answer: "Jonah notices the problem ahead of time, while Beatriz trusts the plan no matter what.",
-        explanation: "Jonah stands at the top of the hill on Friday and says the water is going to go somewhere. Beatriz answers that this is exactly why it is a system. Beatriz never gives up — she counts the money and starts planning a bake sale — and Jonah is not angry; he is still listening to her at the end." },
+        answer: "Jonah notices the problem ahead of time, while Beatriz trusts the plan even after Jonah warns her.",
+        explanation: "As soon as Jonah hears the plan, he points out that the driveway is on a hill, and on Friday he goes and looks at it. Beatriz answers that the hill is the whole system. Beatriz never gives up — she counts the money and starts planning a bake sale — and Jonah is not angry; he is still listening to her at the end." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
         choices: [
-          "\"I stood at the top of it and I looked all the way down to the street, and I said, 'Beatriz, the water is going to go somewhere.'\"",
+          "\"'Beatriz, your uncle's driveway is on a hill.'\"",
           "\"There was a drawing on it. There were arrows.\"",
           "\"Beatriz ran down the hill after the sponges.\"",
-          "\"On Monday Ms. Reyes read Mrs. Nakamura's email out loud to the whole class.\""
+          "\"On Monday Ms. Reyes read Mrs. Nakamura's email out loud to the whole class, the part where she said she had never once seen a parade on Ellis Street before and hoped there would be another.\""
         ],
-        answer: "\"I stood at the top of it and I looked all the way down to the street, and I said, 'Beatriz, the water is going to go somewhere.'\"",
-        explanation: "This is Jonah seeing the problem a full day before it happens and saying so out loud. It shows the difference between them better than anything else, because Beatriz hears the warning and keeps going." } },
+        answer: "\"'Beatriz, your uncle's driveway is on a hill.'\"",
+        explanation: "This is Jonah seeing the problem the moment he hears the plan, before the car wash ever starts. Beatriz hears the warning, taps her arrows, and keeps going. The other choices describe the plan, the mess, or what happened on Monday." } },
 
     /* ── PASSAGE 2 · items 5–7 ── */
 
@@ -215,36 +215,36 @@ window.FORM_B = {
       partA: {
         q: "Part A — How does the narrator feel about band by the END of the passage?",
         choices: [
-          "She still wishes she were first chair, but band has become something she does not want to miss.",
-          "She has decided that being first chair never mattered to her.",
-          "She is upset with Mr. Duarte for keeping her in second chair.",
-          "She plans to quit band over Thanksgiving break."
+          "The narrator is still a little disappointed about second chair, but band has become something worth looking forward to.",
+          "The narrator has decided that being first chair never really mattered, not even back in Cranston.",
+          "The narrator is angry that Mr. Duarte did not move anyone to a new chair after the November test.",
+          "The narrator plans to quit band over Thanksgiving break and join a different club after that."
         ],
-        answer: "She still wishes she were first chair, but band has become something she does not want to miss.",
-        explanation: "Both parts have to fit. She says she thought she would mind more — so she does still care about the chair — but what actually bothers her walking out is that there will be no rehearsal over break. That is the change. Nothing in the passage shows her blaming Mr. Duarte or thinking about quitting." },
+        answer: "The narrator is still a little disappointed about second chair, but band has become something worth looking forward to.",
+        explanation: "Both parts have to fit. The narrator says, \"I thought I would mind more than I did\" — so the chair still matters a little. But what really bothers the narrator walking out is that there will be no rehearsal over break. That is the change. Nothing in the passage shows the narrator blaming Mr. Duarte or thinking about quitting." },
       partB: {
         q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
         longChoices: true,
         choices: [
           "\"What I minded, walking out of the band room, was that I only had two more days until Thanksgiving break, when there would be no rehearsal at all.\"",
-          "\"For three weeks I did not talk to anybody in band.\"",
+          "\"For three weeks I did not talk to anybody in band. I came in, I assembled my clarinet, I played the notes on the page, I took it apart, I left.\"",
           "\"In November Mr. Duarte did the chair test. Hana stayed first. I stayed second.\"",
           "\"Mine came out fine. Fine is a word I have used a lot since we moved.\""
         ],
         answer: "\"What I minded, walking out of the band room, was that I only had two more days until Thanksgiving break, when there would be no rehearsal at all.\"",
-        explanation: "Wanting more rehearsal is the proof that her feeling changed — three weeks earlier she came in, played, and left without speaking to anyone. The other sentences all describe how she felt before Hana turned around." } },
+        explanation: "Wanting more rehearsal is the proof that the narrator's feeling changed. A few weeks earlier, the narrator came in, played, and left without speaking to anyone. The chair test only tells you what happened, not how the narrator feels, and the other two sentences describe how the narrator felt before Hana turned around." } },
 
     // Item 6 — evidence-selection MC, dialogue lines (curiosity)
     { id: "B06", p: 1, longChoices: true,
       q: "Which detail from the passage BEST supports the idea that Hana is CURIOUS?",
       choices: [
-        "\"'Wait. What was the fingering your teacher taught you for high C? Because Mr. Duarte's makes my hand cramp and I've been doing it wrong for a year, I think.'\"",
+        "\"'Wait. What was the fingering your teacher taught you for high C?'\"",
         "\"Hana did not say oh. She did not say that's cool and turn back around.\"",
-        "\"She had a real wooden clarinet instead of a plastic one.\"",
-        "\"At rehearsal the next week she scooted her chair over about four inches so our music stands lined up.\""
+        "\"She had a real wooden clarinet instead of a plastic one, and when we played the scale at the start of rehearsal her sound came out round and finished, like it had been waiting in there the whole time.\"",
+        "\"At rehearsal the next week she scooted her chair over about four inches so our music stands lined up, which is a small thing and is also not a small thing.\""
       ],
-      answer: "\"'Wait. What was the fingering your teacher taught you for high C? Because Mr. Duarte's makes my hand cramp and I've been doing it wrong for a year, I think.'\"",
-      explanation: "Curious means wanting to know more. Hana hears that the new girl was first chair somewhere else and immediately wants to learn something from her — she even admits she may have been doing it wrong. The scooted chair shows she is kind, and the wooden clarinet shows she is skilled." },
+      answer: "\"'Wait. What was the fingering your teacher taught you for high C?'\"",
+      explanation: "Curious means wanting to know more. Hana hears that the narrator was first chair somewhere else and right away asks a question so she can learn something new. Not turning back around shows she is paying attention, the scooted chair shows she is kind, and the wooden clarinet shows she is skilled." },
 
     // Item 7 — main idea of ONE re-shown paragraph
     { id: "B07", p: 1,
@@ -253,13 +253,13 @@ window.FORM_B = {
         "I did not want to say it. Saying it out loud in this room, in this chair, felt like bragging about a house I did not live in anymore."
       ],
       choices: [
-        "Her old success feels embarrassing to mention because it no longer belongs to her here.",
-        "She is afraid Hana will not believe that she was first chair.",
-        "She misses the house her family lived in before the move.",
-        "She thinks bragging is wrong and tries never to do it."
+        "The narrator's old success feels embarrassing to mention because it no longer counts here.",
+        "The narrator is afraid Hana will not believe the story about being first chair.",
+        "The narrator misses the house the family lived in before the move.",
+        "The narrator thinks bragging is wrong and tries never to do it."
       ],
-      answer: "Her old success feels embarrassing to mention because it no longer belongs to her here.",
-      explanation: "The house is a comparison, not a real house — she is saying the title is like a place she used to live. The paragraph is about why it feels wrong to claim it in this room, in this chair. Nothing says she doubts Hana will believe her or that she has a rule against bragging." },
+      answer: "The narrator's old success feels embarrassing to mention because it no longer counts here.",
+      explanation: "The house is a comparison, not a real house. Being first chair is like a home the narrator does not live in anymore. The paragraph is about why it feels wrong to claim it in this room, in this chair. Nothing says the narrator doubts that Hana will believe it, or has a rule against bragging." },
 
     /* ── PASSAGE 3 · items 8–10 ── */
 
@@ -292,7 +292,7 @@ window.FORM_B = {
         longChoices: true,
         choices: [
           "\"Cedar did not argue with him. Arguing would have meant opening the low room, and there were birds in it.\"",
-          "\"Cedar's coat was plain.\"",
+          "\"Cedar's coat was plain. It was dark and narrow and sharp-smelling, and nobody on the ridge said one word about it, which suited Cedar, who did not talk much anyway.\"",
           "\"North Wind saw this and came back for Cedar on purpose.\"",
           "\"Birch's fine silver coat lay in a ring around her feet.\""
         ],
@@ -321,13 +321,13 @@ window.FORM_B = {
         q: "Part B — Which sentence from the paragraphs above BEST supports the answer in Part A?",
         longChoices: true,
         choices: [
-          "\"'Come back when the wind dies down,' Maple said. 'You will spoil how I look from the path.'\"",
+          "\"'You will spoil how I look from the path.'\"",
           "\"They asked Oak first, because Oak's coat was the widest.\"",
           "\"They asked Birch, and Birch did not even answer.\"",
-          "\"She only pulled her fine silver coat a little tighter.\""
+          "\"'Certainly not,' said Oak.\""
         ],
-        answer: "\"'Come back when the wind dies down,' Maple said. 'You will spoil how I look from the path.'\"",
-        explanation: "Maple gives the reason out loud — how she looks from the path — so this is the one choice where a tree states that appearance is what matters more. Birch's silence and her tightened coat hint at the same thing, but they do not say it." } }
+        answer: "\"'You will spoil how I look from the path.'\"",
+        explanation: "Maple says this to the birds, and it gives the reason out loud: she is worried about how she looks from the path. So this is the one choice where a tree says that looks matter more than helping. Oak's \"Certainly not\" and Birch's silence are refusals, but they do not give a reason." } }
 
   ]
 };
