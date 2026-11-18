@@ -142,20 +142,20 @@ window.FORM_A = {
 
     // Item 1 — evidence-selection MC over passage excerpts
     { id: "A01", p: 0, longChoices: true,
-      q: "Which detail from the passage BEST supports the idea that Cameron understands Dante very well?",
+      q: "Which detail from the passage **best** supports the idea that Cameron can tell when someone is only trying to make people feel better?",
       choices: [
+        "\"The custodian came by with a second mop, looked at all the orange, and told us he had seen worse. I did not believe him, but it was a kind thing to say.\"",
         "\"I have known Dante since kindergarten, so I did not argue. I just went and got the newspaper, the flour, and the bucket, because I knew we would need all three before the afternoon was over.\"",
-        "\"We built the mountain in his garage out of chicken wire and paste. It took two days and it looked amazing — gray and lumpy with little plastic trees stuck to the bottom.\"",
         "\"Dante poured in the vinegar. For about one second, nothing happened. Then the volcano made a sound like a truck clearing its throat, and a column of orange foam shot straight up and hit the bottom of the scoreboard.\"",
-        "\"The custodian came by with a second mop, looked at all the orange, and told us he had seen worse. I did not believe him, but it was a kind thing to say.\""
+        "\"On Monday, Ms. Okafor handed back our grade sheet. At the bottom, under the score, she had written six words in small neat letters: 'Science is full of unexpected results.'\""
       ],
-      answer: "\"I have known Dante since kindergarten, so I did not argue. I just went and got the newspaper, the flour, and the bucket, because I knew we would need all three before the afternoon was over.\"",
-      explanation: "Understanding someone well means you can guess what they will do. Cameron gets the supplies before Dante even asks, because Cameron already knows how the afternoon will go. The other choices tell you what they built, what happened at the fair, and what the custodian said, but none of them shows Cameron guessing what Dante will do." },
+      answer: "\"The custodian came by with a second mop, looked at all the orange, and told us he had seen worse. I did not believe him, but it was a kind thing to say.\"",
+      explanation: "The custodian says he has seen worse. Cameron does not believe him, but sees that he said it to be kind. So Cameron can tell the custodian only wanted them to feel better. The other choices show Cameron getting the supplies ahead of time, the volcano going off, and the note Ms. Okafor wrote. None of them shows Cameron seeing why someone said something." },
 
     // Item 2 — EBSR: theme + supporting detail
     { id: "A02", p: 0, type: "ebsr",
       partA: {
-        q: "Part A — What is a THEME of the passage?",
+        q: "What is a theme of the passage?",
         choices: [
           "It is important to enjoy what you do, even when it does not turn out the way you planned.",
           "It is important to share what you have, even when you do not have very much.",
@@ -165,7 +165,7 @@ window.FORM_A = {
         answer: "It is important to enjoy what you do, even when it does not turn out the way you planned.",
         explanation: "The volcano floods the gym, and the two friends spend all of recess mopping. But Dante hums while he mops, keeps the grade sheet like it is money, and says unexpected results are the whole point of science. Cameron is already planning next year's project. Nothing in the story is about sharing, cheering for another team, or waiting your turn." },
       partB: {
-        q: "Part B — Which detail from the passage BEST supports the answer in Part A?",
+        q: "Which detail from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "\"Dante mopped and hummed. He did not seem sorry even a little bit.\"",
@@ -179,7 +179,7 @@ window.FORM_A = {
     // Item 3 — EBSR: author's craft (quotation marks / irony) + detail
     { id: "A03", p: 0, type: "ebsr",
       partA: {
-        q: "Part A — Read these sentences from the passage: \"I want to be clear that I said something. I said, 'Dante, I think that is too much.' I said it out loud, with my mouth, in the garage. I want that written down somewhere.\" Why does the author include the words \"with my mouth\" and \"I want that written down somewhere\"?",
+        q: "Read these sentences from the passage: \"I want to be clear that I said something. I said, 'Dante, I think that is too much.' I said it out loud, with my mouth, in the garage. I want that written down somewhere.\" Why does the author include the words \"with my mouth\" and \"I want that written down somewhere\"?",
         choices: [
           "To show in a funny way that Cameron wants credit for warning Dante",
           "To show that Cameron is not sure about having spoken out loud",
@@ -189,7 +189,7 @@ window.FORM_A = {
         answer: "To show in a funny way that Cameron wants credit for warning Dante",
         explanation: "Nobody needs to explain that they spoke \"with my mouth.\" The author piles on extra words on purpose so it sounds like Cameron is speaking to a judge in court. It is a joke that shows how badly Cameron wants everyone to know the disaster was somebody else's idea." },
       partB: {
-        q: "Part B — Which detail from the passage BEST supports the answer in Part A?",
+        q: "Which detail from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "\"'Six?' I said. 'The instructions say one.'\"",
@@ -203,7 +203,7 @@ window.FORM_A = {
     // Item 4 — EBSR: character inference + supporting sentence
     { id: "A04", p: 0, type: "ebsr",
       partA: {
-        q: "Part A — Based on the passage, how are Cameron and Dante DIFFERENT?",
+        q: "Based on the passage, how are Cameron and Dante different?",
         choices: [
           "Cameron thinks about what might go wrong, while Dante thinks only about how big it could be.",
           "Cameron cares about winning a ribbon at the science fair, while Dante does not care about science at all.",
@@ -213,7 +213,7 @@ window.FORM_A = {
         answer: "Cameron thinks about what might go wrong, while Dante thinks only about how big it could be.",
         explanation: "Cameron measures the base twice so the volcano will fit on the table, reads the instructions, and warns Dante about the six boxes. Dante measures nothing and keeps saying the volcano needs to be taller. Both of them work hard and neither one is embarrassed — Cameron is planning next year's project with him." },
       partB: {
-        q: "Part B — Which detail from the passage BEST supports the answer in Part A?",
+        q: "Which detail from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "\"I measured the base twice so it would fit on a cafeteria table. Dante measured nothing.\"",
@@ -229,7 +229,7 @@ window.FORM_A = {
     // Item 5 — EBSR: feeling change + supporting sentence
     { id: "A05", p: 1, type: "ebsr",
       partA: {
-        q: "Part A — How does the narrator feel about Millbrook by the END of the passage?",
+        q: "How does the narrator feel about Millbrook by the end of the passage?",
         choices: [
           "The narrator still misses Chicago, but Millbrook feels less lonely than it did.",
           "The narrator has decided that Millbrook is better than Chicago.",
@@ -239,7 +239,7 @@ window.FORM_A = {
         answer: "The narrator still misses Chicago, but Millbrook feels less lonely than it did.",
         explanation: "Both halves have to be true. The narrator points out that there is \"not one single water tower anywhere in Millbrook,\" so Chicago is still on the narrator's mind. But the cafeteria now feels \"a little less like somebody else's room.\" The feeling changed; it did not flip all the way over." },
       partB: {
-        q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
+        q: "Which sentence from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "\"But the cafeteria, when I thought about it at my desk, felt a little less like somebody else's room.\"",
@@ -250,21 +250,21 @@ window.FORM_A = {
         answer: "\"But the cafeteria, when I thought about it at my desk, felt a little less like somebody else's room.\"",
         explanation: "\"A little less like somebody else's room\" is the proof that something changed. Before Nadia sat down, the cafeteria was a place where the narrator ate alone at table nine. The other three sentences all describe how lonely the narrator was earlier in the passage." } },
 
-    // Item 6 — evidence-selection MC, dialogue lines (curiosity)
+    // Item 6 — evidence-selection MC, dialogue lines (an invitation)
     { id: "A06", p: 1, longChoices: true,
-      q: "Which detail from the passage BEST supports the idea that Nadia is CURIOUS?",
+      q: "Which detail from the passage **best** supports the idea that Nadia wants the narrator to stop eating lunch alone?",
       choices: [
-        "\"'Why is it on the roof? Isn't that heavy?' … 'Do they fill it with a hose or does the rain do it?'\"",
         "\"'I'm Nadia,' she said. 'I sit at table four. There's an open seat.'\"",
-        "\"It was the girl who sits two rows over in math, the one with the enormous green backpack.\"",
-        "\"When the bell rang she stacked her tray on mine, which nobody has to do and nobody does.\""
+        "\"'Why is it on the roof? Isn't that heavy?' … 'Do they fill it with a hose or does the rain do it?'\"",
+        "\"'Huh,' she said, like I had told her something instead of nothing.\"",
+        "\"'Okay, what about this. Did you ever sit out there?'\""
       ],
-      answer: "\"'Why is it on the roof? Isn't that heavy?' … 'Do they fill it with a hose or does the rain do it?'\"",
-      explanation: "Curious means wanting to know more. Nadia keeps asking questions even after the narrator says \"I don't know\" twice. The invitation and the stacked tray show she is friendly, and the backpack line is just how the narrator recognizes her." },
+      answer: "\"'I'm Nadia,' she said. 'I sit at table four. There's an open seat.'\"",
+      explanation: "The narrator has been eating alone at table nine for three weeks. Nadia tells the narrator where she sits and that there is an open seat at her table. That is an invitation to stop eating alone. Her questions about the water tower and the fire escape show she likes the drawings, and the way she says huh shows she is listening. None of them is about where the narrator eats lunch." },
 
     // Item 7 — main idea of ONE re-shown paragraph
     { id: "A07", p: 1,
-      q: "Read this paragraph from the passage again. What is the MAIN IDEA of the paragraph?",
+      q: "Read this paragraph from the passage again. What is the main idea of the paragraph?",
       excerpt: [
         "It is not that anybody is mean here. Nobody is anything here. People say \"hey\" in the hallway and then keep walking, which is somehow worse than being ignored. At least being ignored is simple."
       ],
@@ -279,22 +279,22 @@ window.FORM_A = {
 
     /* ── PASSAGE 3 · items 8–10 ── */
 
-    // Item 8 — evidence MC with PARAPHRASED options (courage)
+    // Item 8 — evidence MC with PARAPHRASED options (patience)
     { id: "A08", p: 2,
-      q: "Which detail from the passage BEST supports the idea that Heron has great courage?",
+      q: "Which detail from the passage **best** supports the idea that Heron is patient?",
       choices: [
-        "She walks into the cold deep channel even after Kingfisher warns her that the current will take her.",
-        "She stands in the shallows on two thin legs and listens to the other animals.",
-        "She hears a sound like a small stone going down three days before anyone notices.",
-        "She receives the gift of stillness from Old Turtle at the end of the story."
+        "She sets one foot down and waits, then sets the other foot down and waits again.",
+        "She walks into the cold, deep channel even after Kingfisher laughs and says it will take her.",
+        "She tells Kingfisher to hold her feathers and not let go before she goes in.",
+        "She comes up from the water with Old Turtle in her beak, muddy and alive."
       ],
-      answer: "She walks into the cold deep channel even after Kingfisher warns her that the current will take her.",
-      explanation: "Courage means doing the frightening thing anyway. Heron is told plainly that the channel will kill her, and she goes in. Listening and hearing the stone show that she pays attention, and the gift comes after — those are not the brave act itself." },
+      answer: "She sets one foot down and waits, then sets the other foot down and waits again.",
+      explanation: "Patient means you are willing to wait calmly. In the cold channel, Heron takes one step, waits, and takes the next step, with no hurry at all. Walking into the channel shows she is brave, the feathers line is what she says to Kingfisher, and coming up with Old Turtle is how the rescue ends. None of them shows her waiting calmly." },
 
     // Item 9 — EBSR: theme + supporting sentence
     { id: "A09", p: 2, type: "ebsr",
       partA: {
-        q: "Part A — What is a THEME of the passage?",
+        q: "What is a theme of the passage?",
         choices: [
           "It is important to listen, because the loudest voices often miss what matters.",
           "It is important to speak up for yourself when others doubt you.",
@@ -304,7 +304,7 @@ window.FORM_A = {
         answer: "It is important to listen, because the loudest voices often miss what matters.",
         explanation: "Heron is the only one who hears Old Turtle go down, because everyone else is too busy talking. At the end Old Turtle says so himself. Heron never argues back to defend herself, and the other animals never help — they shout from the bank. The story is about listening, not speaking up or teamwork." },
       partB: {
-        q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
+        q: "Which sentence from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "\"'You could all hear the same water,' he said. 'Only one of you was listening to it.'\"",
@@ -316,7 +316,7 @@ window.FORM_A = {
         explanation: "Old Turtle says the theme out loud: all the animals could hear the water, but only Heron was really listening. The other choices are about Kingfisher's rudeness, what Heron asks for, or how hard the rescue was. None of them is about listening." } },
 
     // Item 10 — EBSR: conclusion + supporting sentence, over a re-shown excerpt
-    { id: "A10", p: 2, type: "ebsr",
+    { id: "A10", p: 2, type: "ebsr", hot: true,
       excerpt: [
         "She walked into the channel. The cold went up her legs like a knife and the current pushed her sideways, but Heron did not hurry and Heron did not thrash. She set one foot. She waited. She set the other foot. She waited again.",
         "Otter shouted advice from the bank the whole time. Frog shouted the opposite advice. Kingfisher shouted that she was doing it wrong, taunting her from the safety of the shore.",
@@ -324,26 +324,34 @@ window.FORM_A = {
         "For a long time nothing happened. The marsh got bored and began to argue about something else."
       ],
       partA: {
-        q: "Part A — Read the four paragraphs above again. Which statement BEST provides a conclusion that can be drawn from them?",
+        q: "Read the four paragraphs above again. Click on the statement that **best** provides a conclusion that can be drawn from them.",
         choices: [
-          "Heron succeeds because she stays patient and refuses to waste anything on the animals shouting at her.",
-          "Heron succeeds because the other animals finally stop paying attention to her.",
-          "Heron is too frightened by the cold water to move quickly through the channel.",
-          "Heron would have moved faster if the other animals had given her better advice."
+          "Heron does not answer the animals because she needs all of her breath for the rescue.",
+          "Heron does not answer the animals because she is angry at Kingfisher for making fun of her.",
+          "Heron moves slowly because the cold water hurts her legs too much for her to hurry.",
+          "The advice that Otter and Frog shout from the bank helps Heron cross the channel safely."
         ],
-        answer: "Heron succeeds because she stays patient and refuses to waste anything on the animals shouting at her.",
-        explanation: "A conclusion has to be built out of the paragraphs. She does not hurry, she waits between steps, and she will not spend a breath answering anyone. The marsh losing interest is something that happens to her, not the reason she succeeds — and nothing says she is frozen by fear." },
+        answer: "Heron does not answer the animals because she needs all of her breath for the rescue.",
+        explanation: "The paragraphs say that answering costs a breath, and Heron needs every breath she has. So she stays quiet to save her breath for the rescue. Nothing says she is angry at Kingfisher. The water is cold, but she does not hurry even so. She is slow and careful on purpose. And the advice from the bank cannot help her, because Frog shouts the opposite of what Otter says." },
       partB: {
-        q: "Part B — Which sentence from the paragraphs above BEST supports the answer in Part A?",
-        longChoices: true,
-        choices: [
-          "\"Heron did not answer any of them. Answering costs a breath, and she needed every breath she had.\"",
-          "\"For a long time nothing happened.\"",
-          "\"Kingfisher shouted that she was doing it wrong, taunting her from the safety of the shore.\"",
-          "\"Otter shouted advice from the bank the whole time.\""
+        q: "Click the sentence from the paragraphs above that **best** supports the answer in Part A.",
+        paras: [
+          ["She walked into the channel.",
+           "The cold went up her legs like a knife and the current pushed her sideways, but Heron did not hurry and Heron did not thrash.",
+           "She set one foot.",
+           "She waited.",
+           "She set the other foot.",
+           "She waited again."],
+          ["Otter shouted advice from the bank the whole time.",
+           "Frog shouted the opposite advice.",
+           "Kingfisher shouted that she was doing it wrong, taunting her from the safety of the shore."],
+          ["Heron did not answer any of them.",
+           "Answering costs a breath, and she needed every breath she had."],
+          ["For a long time nothing happened.",
+           "The marsh got bored and began to argue about something else."]
         ],
-        answer: "\"Heron did not answer any of them. Answering costs a breath, and she needed every breath she had.\"",
-        explanation: "This is the sentence that explains the choice: not answering is deliberate, and the reason given is that she needs every breath. The others describe the shouting around her or the long wait, without showing what she chose to do about it." } }
+        answer: "Answering costs a breath, and she needed every breath she had.",
+        explanation: "This sentence gives the reason Heron stays quiet. Answering would cost a breath, and she needs every breath she has. The sentence just before it tells you that she did not answer, but not why. The other sentences tell about the cold water, her slow steps, the shouting, and the long wait." } }
 
   ]
 };

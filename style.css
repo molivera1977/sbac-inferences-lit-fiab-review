@@ -1051,3 +1051,20 @@ body.teach-on { padding-bottom: 64px; }
 .key-excerpt p { margin: 4px 0; }
 .key-check { margin: 8px 0 0; padding-left: 4px; list-style: none; }
 .key-check li { margin: 3px 0; }
+
+/* Footnote numbers (11/18): a small number on the footnoted word in the story, matching the numbered list under it.
+   Drawn by CSS so the read-aloud never says it. */
+.fn-at::after { content: attr(data-fn); font-size: 0.62em; font-weight: 700; vertical-align: super; line-height: 0; margin-left: 1px; color: var(--primary); }
+.fn-num { display: inline-block; min-width: 1.1em; font-weight: 700; font-size: 0.85em; vertical-align: super; color: var(--primary); }
+
+/* Question 10, tap a sentence (11/18): Part A's statements have no letters; in Part B each sentence of the paragraphs above
+   can be tapped (one). The same marks as the Read Literary IAB's sentences. */
+.answer-btn.ht-statement { text-align: left; }
+#excerpt-box.ht-excerpt .ht-sent { cursor: pointer; border-radius: 6px; padding: 2px 1px; transition: background 0.15s, box-shadow 0.15s;
+  box-decoration-break: clone; -webkit-box-decoration-break: clone; -webkit-tap-highlight-color: transparent; }
+#excerpt-box.ht-excerpt .ht-sent:focus-visible { outline: 3px solid #0d9488; outline-offset: 2px; }
+#excerpt-box.ht-excerpt .ht-sent:not(.locked-choice):hover { background: #e6fffa; box-shadow: 0 2px 0 #5eead4; }
+#excerpt-box.ht-excerpt .ht-sent.locked-choice { cursor: not-allowed; }
+#excerpt-box.ht-excerpt .ht-sent.selected  { background: #fff59d; box-shadow: 0 2px 0 #f9a825; }
+#excerpt-box.ht-excerpt .ht-sent.correct   { background: #d4edda; box-shadow: 0 2px 0 #28a745; }
+#excerpt-box.ht-excerpt .ht-sent.incorrect { background: #f8d7da; box-shadow: 0 2px 0 #dc3545; text-decoration: line-through; text-decoration-color: #dc3545; }

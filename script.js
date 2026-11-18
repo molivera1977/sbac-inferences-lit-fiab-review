@@ -43,9 +43,21 @@ const SESSION_ID = (() => {
 
 /* A TRY SAVED BEFORE THE QUESTIONS OR STORIES CHANGED STARTS OVER (Marcos 11/18: "Yes, start over"). A save keeps its own
    copy of the questions, but the stories always come from the site, so an old try would show an old question beside a
-   new story ("Arizona" in the question, "Cameron" in the story). Each form's fingerprint is taken once, as the page
+   new story (an old name in the question, a new name in the story). Each form's fingerprint is taken once, as the page
    loads, and stamped on every save; checkResume drops a save with no stamp or a different one -- the same as the
    teacher's Discard, so the student just picks the form again. Saved scores and the sheet's rows are not touched. */
+/* QUESTION 10, TAP A SENTENCE (Mr. O 11/18, "go with all recommended fixes"; the real FIAB's item 10 is a hot-text
+   two-part question: Part A a list of statements with no letters, Part B "click the sentence" inside the re-shown
+   paragraphs). The data keeps those paragraphs' sentences (partB.paras); every sentence is a choice, in story order.
+   Made once, before anything reads the forms (the fingerprint below, the bank). */
+Object.keys(window).filter(k => /^FORM_[A-Z]$/.test(k)).forEach(k => (window[k].items || []).forEach(it => {
+  if (it.hot && it.partB && Array.isArray(it.partB.paras) && !it.partB.choices) it.partB.choices = it.partB.paras.flat();
+}));
+function hotParaHTML(sentences) {
+  return (sentences || []).map(t =>
+    `<span class="ht-sent" data-answer="${esc(t)}" role="radio" aria-checked="false" tabindex="0">${esc(t)}</span>`).join(' ');
+}
+
 function formFingerprint(form) {
   const d = window['FORM_' + form];
   if (!d) return '';
@@ -72,7 +84,7 @@ let tabSwitchCount = 0;
 function missEntry(m) {
   const picked = m.yourAnswer == null || m.yourAnswer === '' ? '' :
     ` (picked: ${String(m.yourAnswer).replace(/\s*\|\s*/g, ' / ').replace(/\s+/g, ' ').trim()})`;
-  return `[${m.id}] (${m.skill || 'Unsorted'}) ${m.q}${picked}`;
+  return `[${m.id}] (${m.skill || 'Unsorted'}) ${plainCue(m.q)}${picked}`;
 }
 
 function submitScorePartial() {
@@ -205,6 +217,13 @@ let reviewAutoRun   = false;
    the Place Value FIAB ran formatMathText() this site
    escapes instead — every choice here is a real sentence
    out of a story and must render exactly as written. */
+/* Question text as Smarter Balanced writes it (Mr. O 11/18, "go with all recommended fixes"; the proctor: cue words in
+   lowercase and bold, never CAPITALS): escaped like everything else, then **best** in the data is shown in bold. The read-
+   aloud takes the words off the page, so the voice says "best" the same either way. plainCue() is the same text for the
+   score sheet (no stars). */
+function cue(raw) { return esc(raw).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>'); }
+function plainCue(raw) { return String(raw == null ? '' : raw).replace(/\*\*([^*]+)\*\*/g, '$1'); }
+
 function esc(raw) {
   if (raw == null) return '';
   return String(raw)
@@ -388,7 +407,7 @@ function skillFor(q, partIdx) {
 /* Every control a student can answer with — used by the
    read lock and by confirm to freeze the item. */
 function answerControls() {
-  return document.querySelectorAll('.answer-btn');
+  return document.querySelectorAll('.answer-btn, #excerpt-box .ht-sent');
 }
 
 function lockControl(el, locked) {
@@ -635,14 +654,34 @@ function wrapWords(html) {
    so a paragraph is numbered the same in both places —
    a student who notes "paragraph 4" on the story screen
    finds paragraph 4 in the panel. */
+/* Footnoted words (Mr. O 11/18, "go with all recommended fixes"; the proctor: Smarter Balanced puts a small number on the
+   word in the story that matches a numbered footnote). The first use of each footnote word gets the number, drawn by CSS
+   (.fn-at::after) so it is never part of the words the voice says. The mark wraps the whole word as the read-aloud splits
+   it (with a comma or period right after it), so the voice and its highlight are unchanged. */
+function footnoteMarks(passage) {
+  const marks = [];   // [paragraph index, word, number]
+  (passage.footnotes || []).forEach((f, k) => {
+    const re = new RegExp('(^|\\s)(' + String(f.word).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')(?=[^\\sA-Za-z]*(\\s|$))', 'i');
+    const at = passage.paragraphs.findIndex(t => re.test(t));
+    if (at >= 0) marks.push([at, re, k + 1]);
+  });
+  return marks;
+}
 function storyParagraphsHTML(passage) {
-  return passage.paragraphs.map((t, i) =>
-    `<p class="story-para">
+  const marks = footnoteMarks(passage);
+  return passage.paragraphs.map((t, i) => {
+    let html = esc(t);
+    marks.filter(m => m[0] === i).forEach(([, re, n]) => {
+      html = html.replace(re, (all, lead, word) => all.replace(word, '\u0000' + n + '\u0001' + word + '\u0002'));
+    });
+    // the mark takes the word and the punctuation stuck to it, as one piece
+    html = html.replace(/\u0000(\d+)\u0001([^\u0002]*)\u0002([^\s<]*)/g, '<span class="fn-at" data-fn="$1">$2$3</span>');
+    return `<p class="story-para">
        <button class="speak-btn para-speak-btn" onclick="speakParagraph(this)" title="Read paragraph ${i + 1} aloud">🔊</button>
        <span class="para-num" aria-label="Paragraph ${i + 1}">${i + 1}</span>
-       <span class="para-text">${esc(t)}</span>
-     </p>`
-  ).join('');
+       <span class="para-text">${html}</span>
+     </p>`;
+  }).join('');
 }
 
 function storyNoteHTML(passage) {
@@ -654,7 +693,7 @@ function storyFootnotesHTML(passage) {
   if (!passage.footnotes || !passage.footnotes.length) return '';
   return `<div class="story-footnotes">
       ${passage.footnotes.map(f =>
-        `<div class="footnote"><span class="fn-word">${esc(f.word)}</span> — ${esc(f.meaning)}</div>`
+        `<div class="footnote"><span class="fn-num">${passage.footnotes.indexOf(f) + 1}</span> <span class="fn-word">${esc(f.word)}</span> — ${esc(f.meaning)}</div>`
       ).join('')}
     </div>`;
 }
@@ -969,16 +1008,16 @@ const app = {
     const list = (choices, right) => `<ul class="key-choices">${choices.map(c =>
       `<li class="${right.includes(c) ? 'key-right' : ''}">${esc(c)}${right.includes(c) ? ' ✅' : ''}</li>`).join('')}</ul>`;
     if (q.type === 'ebsr') {
-      return `<p class="key-ask">${esc(q.partA.q)}</p>${list(q.partA.choices, [q.partA.answer])}${why(q.partA.explanation)}` +
-        `<p class="key-ask">${esc(q.partB.q)}</p>${list(q.partB.choices, [q.partB.answer])}${why(q.partB.explanation)}`;
+      return `<p class="key-ask">${cue(q.partA.q)}</p>${list(q.partA.choices, [q.partA.answer])}${why(q.partA.explanation)}` +
+        `<p class="key-ask">${cue(q.partB.q)}</p>${list(q.partB.choices, [q.partB.answer])}${why(q.partB.explanation)}`;
     }
     if (q.type === 'cr') {   // the written answer: the teacher grades it — the tip the student sees, a strong answer, the checklist
-      return `<p class="key-ask">${esc(q.q)}</p><p class="key-note">${esc(q.guidance)}</p>` +
+      return `<p class="key-ask">${cue(q.q)}</p><p class="key-note">${esc(q.guidance)}</p>` +
         `<div class="key-why"><strong>A strong answer:</strong> ${esc(q.model)}</div>` +
         (q.checklist ? `<ul class="key-check">${q.checklist.map(c => `<li>☐ ${esc(c)}</li>`).join('')}</ul>` : '');
     }
     const excerpt = q.excerpt ? `<blockquote class="key-excerpt">${q.excerpt.map(t => `<p>${esc(t)}</p>`).join('')}</blockquote>` : '';
-    return `<p class="key-ask">${esc(q.q)}</p>${excerpt}${list(q.choices, q.answers || [q.answer])}${why(q.explanation)}`;
+    return `<p class="key-ask">${cue(q.q)}</p>${excerpt}${list(q.choices, q.answers || [q.answer])}${why(q.explanation)}`;
   },
 
   printKey() {
@@ -1115,6 +1154,9 @@ const app = {
         document.querySelectorAll(`.answer-btn[data-part="${part}"]`).forEach(btn => {
           if (btn.dataset.answer === q[key].answer) this._selectPartChoice(part, q[key].answer, btn);
         });
+        if (q.hot && part === 'B') document.querySelectorAll('#excerpt-box .ht-sent').forEach(s => {
+          if (s.dataset.answer === q.partB.answer) this._selectHotSentence(s);
+        });
       });
     } else {
       document.querySelectorAll('.answer-btn').forEach(btn => {
@@ -1166,7 +1208,8 @@ const app = {
       if (q.type === 'ebsr') {
         return { ...q,
           partA: { ...q.partA, choices: [...q.partA.choices].sort(() => Math.random() - 0.5) },
-          partB: { ...q.partB, choices: [...q.partB.choices].sort(() => Math.random() - 0.5) } };
+          partB: q.hot ? { ...q.partB, choices: [...q.partB.choices] }   // tap-a-sentence: the story's order
+            : { ...q.partB, choices: [...q.partB.choices].sort(() => Math.random() - 0.5) } };
       }
       return { ...q, choices: [...q.choices].sort(() => Math.random() - 0.5) };
     };
@@ -1522,7 +1565,7 @@ const app = {
     const qtEl = document.getElementById('question-text');
     qtEl.innerHTML = q.type === 'ebsr'
       ? 'This question has two parts. Answer <strong>Part A</strong> and <strong>Part B</strong>.'
-      : esc(q.q);
+      : cue(q.q);
 
     // Re-shown excerpt, when the item has one
     const exEl = document.getElementById('excerpt-box');
@@ -1533,10 +1576,12 @@ const app = {
         ${q.excerpt.map((t, i) =>
           `<p class="excerpt-para">
              <button class="speak-btn para-speak-btn" onclick="speakParagraph(this)" title="Read this part aloud">🔊</button>
-             <span class="para-text">${esc(t)}</span>
+             <span class="para-text">${q.hot ? hotParaHTML(q.partB.paras[i]) : esc(t)}</span>
            </p>`
         ).join('')}`;
+      exEl.classList.toggle('ht-excerpt', !!q.hot);
     } else {
+      exEl.classList.remove('ht-excerpt');
       exEl.classList.add('hidden');
       exEl.innerHTML = '';
     }
@@ -1570,16 +1615,17 @@ const app = {
   /* ── MULTIPLE CHOICE ────────────────────────────────
      `part` is null for a plain item, or 'A' / 'B' inside
      an EBSR so the two blocks select independently. */
-  _renderChoices(q, wrap, choices, part, longChoices) {
+  _renderChoices(q, wrap, choices, part, longChoices, noLetters) {
     choices.forEach((text, i) => {
       const row = document.createElement('div');
       row.className = 'answer-row';
 
       const btn = document.createElement('button');
-      btn.className = 'answer-btn' + (longChoices ? ' excerpt-choice' : '');
+      btn.className = 'answer-btn' + (longChoices ? ' excerpt-choice' : '') + (noLetters ? ' ht-statement' : '');
       btn.dataset.answer = text;
       if (part) btn.dataset.part = part;
-      btn.innerHTML = `<strong>${['A','B','C','D'][i]}.</strong>&nbsp;<span class="choice-text">${esc(text)}</span>`;
+      btn.innerHTML = noLetters ? `<span class="choice-text">${esc(text)}</span>`   // a statement to click, no letter (question 10)
+        : `<strong>${['A','B','C','D'][i]}.</strong>&nbsp;<span class="choice-text">${esc(text)}</span>`;
       btn.onclick = () => part ? this._selectPartChoice(part, text, btn) : this._selectChoice(text, btn);
 
       const speakBtn = document.createElement('button');
@@ -1621,7 +1667,7 @@ const app = {
       qRow.className = 'ebsr-q-row';
       const qText = document.createElement('div');
       qText.className = 'ebsr-q';
-      qText.innerHTML = esc(data.q);
+      qText.innerHTML = cue(data.q);
       const qSpeak = document.createElement('button');
       qSpeak.className = 'speak-btn';
       qSpeak.textContent = '🔊';
@@ -1633,7 +1679,7 @@ const app = {
 
       const choiceWrap = document.createElement('div');
       choiceWrap.className = 'ebsr-choices';
-      this._renderChoices(q, choiceWrap, data.choices, part, data.longChoices);
+      if (!(q.hot && part === 'B')) this._renderChoices(q, choiceWrap, data.choices, part, data.longChoices, q.hot && part === 'A');
       block.appendChild(choiceWrap);
 
       wrap.appendChild(block);
@@ -1652,6 +1698,13 @@ const app = {
     document.querySelectorAll(`.answer-btn[data-part="${part}"]`).forEach(b => b.classList.remove('selected'));
     this.ebsrSelections[part] = text;
     btn.classList.add('selected');
+  },
+
+  _selectHotSentence(el) {
+    if (this.questionLocked || !this.ebsrSelections || el.classList.contains('locked-choice')) return;
+    document.querySelectorAll('#excerpt-box .ht-sent').forEach(s => { s.classList.remove('selected'); s.setAttribute('aria-checked', 'false'); });
+    el.classList.add('selected'); el.setAttribute('aria-checked', 'true');
+    this.ebsrSelections.B = el.dataset.answer;
   },
 
   _renderStreak() {
@@ -1688,7 +1741,10 @@ const app = {
 
     if (q.type === 'ebsr') {
       if (!this.ebsrSelections || !this.ebsrSelections.A || !this.ebsrSelections.B) {
-        this._warn('⚠️ Answer both Part A and Part B before you confirm.');
+        // question 10 (11/18): Part B has no list — say where its answer is
+        this._warn(q.hot && this.ebsrSelections && this.ebsrSelections.A && !this.ebsrSelections.B
+          ? '⚠️ For Part B, tap one sentence in the paragraphs above.'
+          : '⚠️ Answer both Part A and Part B before you confirm.');
         return;
       }
       partsTotal = 2;
@@ -1738,6 +1794,12 @@ const app = {
           if (btn.dataset.answer === data.answer)                     btn.classList.add('correct');
           else if (btn.dataset.answer === this.ebsrSelections[part])   btn.classList.add('incorrect');
         });
+      });
+      // question 10: the key sentence green, a wrong tapped sentence red
+      if (q.hot) document.querySelectorAll('#excerpt-box .ht-sent').forEach(sp => {
+        sp.classList.add('locked-choice');
+        if (sp.dataset.answer === q.partB.answer)               sp.classList.add('correct');
+        else if (sp.dataset.answer === this.ebsrSelections.B)   sp.classList.add('incorrect');
       });
     } else {
       document.querySelectorAll('.answer-btn').forEach(btn => {
@@ -1878,7 +1940,7 @@ const app = {
         this.missedQuestions.map(m =>
           `<div class="missed-item">
             <div class="mi-label">${esc(m.id)}${m.skill ? ` · <span class="mi-skill">${esc(m.skill)}</span>` : ''}</div>
-            <div style="margin:3px 0;">${esc(m.q)}</div>
+            <div style="margin:3px 0;">${cue(m.q)}</div>
             <div>Your answer: <span style="color:var(--danger);">${esc(m.yourAnswer)}</span></div>
             <div>✅ Correct: <strong style="color:var(--correct);">${esc(m.correct)}</strong></div>
             ${m.explanation ? `<div style="margin-top:5px;font-size:0.85rem;color:#555;font-style:italic;">💡 ${esc(m.explanation)}</div>` : ''}
@@ -2269,6 +2331,17 @@ else if (location.hash === '#teacher' && teacherUnlocked()) app.openTeacher();  
     e.stopPropagation();
   }
 }, true));
+
+/* Question 10's sentences (11/18): one listener for the page, since the paragraph speaker re-draws a paragraph's words. */
+document.addEventListener('click', e => {
+  const sp = e.target.closest && e.target.closest('#excerpt-box .ht-sent');
+  if (sp) app._selectHotSentence(sp);
+});
+document.addEventListener('keydown', e => {
+  if (e.key !== 'Enter' && e.key !== ' ') return;
+  const sp = e.target.closest && e.target.closest('#excerpt-box .ht-sent');
+  if (sp) { e.preventDefault(); app._selectHotSentence(sp); }
+});
 
 /* ── PICK UP ON ANY COMPUTER (Marcos 11/12: "i want the kids to have the same experience that they have at home to be
    like they were logging on at school") — spot-sync.js (the same file on every site) keeps a copy of this site's save

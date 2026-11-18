@@ -130,20 +130,20 @@ window.FORM_C = {
 
     // Item 1 — evidence-selection MC
     { id: "C01", p: 0, longChoices: true,
-      q: "Which detail from the passage BEST supports the idea that Omar knows Lucia very well?",
+      q: "Which detail from the passage **best** supports the idea that Lucia does not panic when her trick goes wrong?",
       choices: [
+        "\"At forty seconds I reached for the curtain, and from inside the basket Lucia said, in a very calm voice, 'Don't.'\"",
         "\"I did not ask what the escape was. I asked when rehearsal started, because there is no version of this where I am not at rehearsal.\"",
-        "\"On the night of the show the gym was full and the folding chairs went all the way back to the doors.\"",
-        "\"We practiced in her basement nine times.\"",
-        "\"In the car she told me the chain had caught on the handle and she had spent two minutes and forty seconds working it loose with one finger.\""
+        "\"'Omar,' she said, patting the basket, 'if you knew, your face would give it away.'\"",
+        "\"On the night of the show the gym was full and the folding chairs went all the way back to the doors.\""
       ],
-      answer: "\"I did not ask what the escape was. I asked when rehearsal started, because there is no version of this where I am not at rehearsal.\"",
-      explanation: "Knowing someone well means you can predict them. Omar skips every question a stranger would ask, because he already knows how this ends — he will be at rehearsal. The other choices tell you about the show, the practices, and what Lucia told him later, but none of them shows Omar predicting what Lucia will do." },
+      answer: "\"At forty seconds I reached for the curtain, and from inside the basket Lucia said, in a very calm voice, 'Don't.'\"",
+      explanation: "When the trick goes wrong, Lucia is stuck inside the basket in front of a full gym. Even then, she tells Omar not to open the curtain in a very calm voice. That shows she does not panic. Omar not asking about the escape shows he will help her no matter what, her words about his face come before the show, and the full gym is how the night begins. None of them shows Lucia when the trick goes wrong." },
 
     // Item 2 — EBSR: theme + supporting detail
     { id: "C02", p: 0, type: "ebsr",
       partA: {
-        q: "Part A — What is a THEME of the passage?",
+        q: "What is a theme of the passage?",
         choices: [
           "It is important to stand by a friend and help out when the friend's plan falls apart.",
           "It is important to practice something many times before you perform it in front of people.",
@@ -153,7 +153,7 @@ window.FORM_C = {
         answer: "It is important to stand by a friend and help out when the friend's plan falls apart.",
         explanation: "The whole middle of the story is Omar buying Lucia time with a four-minute story about a cat. They did practice nine times and it still went wrong, so practice is not the lesson. Ms. Adeyemi's words at the end are about the trick itself, not about what friends do for each other. And the story ends with Omar signing on for next year, not staying away." },
       partB: {
-        q: "Part B — Which detail from the passage BEST supports the answer in Part A?",
+        q: "Which detail from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "\"I walked out in front of the curtain and I told the audience about my grandmother's cat.\"",
@@ -167,7 +167,7 @@ window.FORM_C = {
     // Item 3 — EBSR: author's craft (a repeated line) + detail
     { id: "C03", p: 0, type: "ebsr",
       partA: {
-        q: "Part A — The sentence \"It was going to be fine.\" appears twice in the passage — once after the nine rehearsals and once by itself, right after the music starts. Why does the author repeat it?",
+        q: "The sentence \"It was going to be fine.\" appears twice in the passage — once after the nine rehearsals and once by itself, right after the music starts. Why does the author repeat it?",
         choices: [
           "To show that Omar is telling himself something he is no longer sure of",
           "To show that Omar has forgotten what happened at rehearsal",
@@ -177,7 +177,7 @@ window.FORM_C = {
         answer: "To show that Omar is telling himself something he is no longer sure of",
         explanation: "The first time, it comes after nine successful rehearsals and sounds true. The second time it stands alone as its own paragraph, with the curtain closed and the music running — the same words, but now he is talking himself into it. The repetition is what lets you feel the difference." },
       partB: {
-        q: "Part B — Which detail from the passage BEST supports the answer in Part A?",
+        q: "Which detail from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "\"Forty seconds is not a long time unless you are standing in front of a curtain.\"",
@@ -191,7 +191,7 @@ window.FORM_C = {
     // Item 4 — EBSR: character inference + supporting sentence
     { id: "C04", p: 0, type: "ebsr",
       partA: {
-        q: "Part A — Based on the passage, how are Omar and Lucia DIFFERENT?",
+        q: "Based on the passage, how are Omar and Lucia different?",
         choices: [
           "Omar wants to know how the trick works, while Lucia is happy to keep it a secret.",
           "Lucia wants to be in the talent show, while Omar does not want to be in it at all.",
@@ -201,7 +201,7 @@ window.FORM_C = {
         answer: "Omar wants to know how the trick works, while Lucia is happy to keep it a secret.",
         explanation: "Omar asks how the trick works twice and keeps asking; Lucia will not tell him and is happy keeping it to herself. He does not refuse the show — he asks when rehearsal starts, twice — and he does not leave the stage in a panic; he walks out in front of the curtain on purpose." },
       partB: {
-        q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
+        q: "Which sentence from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "\"'I know it's the trick. I'm asking how.'\"",
@@ -217,7 +217,7 @@ window.FORM_C = {
     // Item 5 — EBSR: feeling change + supporting sentence
     { id: "C05", p: 1, type: "ebsr",
       partA: {
-        q: "Part A — How does the narrator feel about the greenhouse by the END of the passage?",
+        q: "How does the narrator feel about the greenhouse by the end of the passage?",
         choices: [
           "The narrator still loves the greenhouse but no longer wants to be the only one in it.",
           "The narrator has decided that there is no need for the greenhouse anymore.",
@@ -227,7 +227,7 @@ window.FORM_C = {
         answer: "The narrator still loves the greenhouse but no longer wants to be the only one in it.",
         explanation: "Both halves are right there in the last three lines: the narrator still eats in the greenhouse and it has not stopped being the warmest place, AND the narrator leaves the door open so somebody can get in. The narrator is not giving it up and is not guarding it from Theo." },
       partB: {
-        q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
+        q: "Which sentence from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "\"But I have started leaving the door open a little, so somebody can get in.\"",
@@ -238,21 +238,21 @@ window.FORM_C = {
         answer: "\"But I have started leaving the door open a little, so somebody can get in.\"",
         explanation: "The open door is the change. At the start the whole point of the greenhouse was that nobody knew about it; by the end the narrator is holding the door open on purpose. The other three sentences all describe how the narrator used the greenhouse before Theo walked in." } },
 
-    // Item 6 — evidence-selection MC, dialogue lines (curiosity)
+    // Item 6 — evidence-selection MC, dialogue lines (responsibility)
     { id: "C06", p: 1, longChoices: true,
-      q: "Which detail from the passage BEST supports the idea that Theo is CURIOUS?",
+      q: "Which detail from the passage **best** supports the idea that Theo is responsible?",
       choices: [
-        "\"'What's in there?' … 'What kind?' … 'You don't know what your own seeds are?'\"",
         "\"'Mrs. Odell's. She had a stroke in September.' … 'Somebody has to do it or they die.'\"",
+        "\"'What's in there?' … 'What kind?' … 'You don't know what your own seeds are?'\"",
         "\"'There's room in the back,' the boy said. 'Behind the tomatoes. The light's bad but it's not nothing.'\"",
-        "\"He watered all eleven pots, slowly, checking each one, and he did not say anything else for a while, and somehow that was not uncomfortable.\""
+        "\"'Nobody's ever in the greenhouse.' He said it like it was a fact about the world that I had just broken.\""
       ],
-      answer: "\"'What's in there?' … 'What kind?' … 'You don't know what your own seeds are?'\"",
-      explanation: "Curious means wanting to know more. Theo puts the water jug down in the middle of his job and keeps asking about the tin box, even after the narrator says, \"I don't know.\" Taking over Mrs. Odell's plants shows he is responsible, and offering the back row shows he is generous." },
+      answer: "\"'Mrs. Odell's. She had a stroke in September.' … 'Somebody has to do it or they die.'\"",
+      explanation: "Responsible means you take care of what needs to be done. Mrs. Odell is sick and cannot water her plants, so Theo does it, because he knows they will die if nobody does. His questions about the tin box show he wants to know more, offering room in the back is a kind thing to do, and his surprise shows that nobody usually comes to the greenhouse. None of them is about taking care of a job." },
 
     // Item 7 — main idea of ONE re-shown paragraph
     { id: "C07", p: 1,
-      q: "Read this paragraph from the passage again. What is the MAIN IDEA of the paragraph?",
+      q: "Read this paragraph from the passage again. What is the main idea of the paragraph?",
       excerpt: [
         "The thing about a new school is that recess is the hardest twenty minutes of the day. Everybody out there already has somebody. You cannot join a game that started in kindergarten. So I sit in the greenhouse with my sandwich and the warm glass and I am not lonely in there, or at least it is a different kind, the kind you choose."
       ],
@@ -267,22 +267,22 @@ window.FORM_C = {
 
     /* ── PASSAGE 3 · items 8–10 ── */
 
-    // Item 8 — evidence MC with PARAPHRASED options (courage)
+    // Item 8 — evidence MC with PARAPHRASED options (paying attention)
     { id: "C08", p: 2,
-      q: "Which detail from the passage BEST supports the idea that Squirrel has great courage?",
+      q: "Which detail from the passage **best** supports the idea that Squirrel pays close attention to what is happening around her?",
       choices: [
-        "She runs to the creek to warn the others even though she is afraid the whole way.",
-        "She is the first animal in the forest to look up when Woodpecker calls about the smoke.",
-        "She notices that all of the birds are flying up off the ridge at the same time.",
-        "After the fire, she asks for no reward except that the warning belong to whoever actually looked."
+        "She sees all of the birds flying up off the ridge at once and knows that something is wrong.",
+        "She runs the long way down to the creek to warn the others even though she is afraid.",
+        "She is small and not brave, and she has always been afraid of the far side of the ridge.",
+        "She reaches the creek with her tail scorched, and she can barely speak to the others."
       ],
-      answer: "She runs to the creek to warn the others even though she is afraid the whole way.",
-      explanation: "Courage is doing the frightening thing anyway — the passage even says she was \"afraid the whole way.\" Looking up and noticing the birds show that she pays attention, and refusing a reward afterward shows she is humble, but the brave act is the run." },
+      answer: "She sees all of the birds flying up off the ridge at once and knows that something is wrong.",
+      explanation: "Paying close attention means noticing what is going on around you. While the other animals ignore the warning, Squirrel watches the birds and understands that birds do not all fly up at once for nothing. Running to the creek shows she is brave, being small and afraid is how she has always been, and the scorched tail shows what the trip did to her. None of them shows her noticing anything." },
 
     // Item 9 — EBSR: theme + supporting sentence
     { id: "C09", p: 2, type: "ebsr",
       partA: {
-        q: "Part A — What is a THEME of the passage?",
+        q: "What is a theme of the passage?",
         choices: [
           "It is important to use a warning carefully, because a warning that is wasted stops working.",
           "It is important to forgive someone who has made a mistake and is sorry for it.",
@@ -292,7 +292,7 @@ window.FORM_C = {
         answer: "It is important to use a warning carefully, because a warning that is wasted stops working.",
         explanation: "Badger warns him: \"A warning is not a toy.\" Woodpecker wastes his warning call again and again for fun, so by the middle of the summer nobody moves when he calls, and the forest nearly burns because of it. He is not forgiven — he loses the voice — and Squirrel's size is never the point." },
       partB: {
-        q: "Part B — Which sentence from the passage BEST supports the answer in Part A?",
+        q: "Which sentence from the passage **best** supports the answer in Part A?",
         longChoices: true,
         choices: [
           "\"By the middle of the summer, nobody moved when Woodpecker called.\"",
@@ -304,33 +304,36 @@ window.FORM_C = {
         explanation: "Woodpecker has wasted his warning so many times that nobody moves when he calls. That is the warning losing its power. Woodpecker laughing is the careless part, but this sentence is where it stops working." } },
 
     // Item 10 — EBSR: conclusion + supporting sentence, over a re-shown excerpt
-    { id: "C10", p: 2, type: "ebsr",
+    { id: "C10", p: 2, type: "ebsr", hot: true,
       excerpt: [
+        "Woodpecker did not argue with her.",
         "So they took the ringing call away from him, and what they left him was his beak and the hard trunk of a tree.",
         "And that is why, to this day, you will not hear a woodpecker call a warning across a valley. You will hear him knocking, over and over, on wood. It is a sound nobody can make up and nobody can fake, because the tree has to answer back.",
         "Squirrel was given nothing at all, which is what she asked for. She only asked that the warning belong to whoever actually looked."
       ],
       partA: {
-        q: "Part A — Read the three paragraphs above again. Which statement BEST provides a conclusion that can be drawn from them?",
+        q: "Read the four paragraphs above again. Click on the statement that **best** provides a conclusion that can be drawn from them.",
         choices: [
-          "Woodpecker's new sound is fair punishment, because knocking is something he cannot fake.",
-          "Woodpecker is given the knocking sound because it carries farther than his old call did.",
-          "Woodpecker is forgiven by the forest once the fire is over.",
-          "Squirrel is unhappy that the forest gave her nothing for saving them."
+          "Woodpecker's knocking can be trusted, because it is a sound he cannot make up or fake.",
+          "Woodpecker is given the knocking sound because it carries farther than his old ringing call.",
+          "Squirrel is upset that the forest gave her nothing after she warned every animal about the fire.",
+          "Woodpecker knocks over and over on wood because he is still trying to trick the other animals."
         ],
-        answer: "Woodpecker's new sound is fair punishment, because knocking is something he cannot fake.",
-        explanation: "The paragraphs say the knock is \"a sound nobody can make up and nobody can fake, because the tree has to answer back.\" He lied with a voice, so they left him a sound that has to be earned from the wood. He is not forgiven — they take the call away — and Squirrel asked for nothing." },
+        answer: "Woodpecker's knocking can be trusted, because it is a sound he cannot make up or fake.",
+        explanation: "The paragraphs say the knock is a sound nobody can make up and nobody can fake, because the tree has to answer back. A sound that cannot be faked is a sound the forest can trust. Nothing says the knock carries farther than the old call. Squirrel was given nothing, but that is what she asked for, so she is not upset. And since the knock cannot be faked, Woodpecker cannot use it to trick anyone." },
       partB: {
-        q: "Part B — Which sentence from the paragraphs above BEST supports the answer in Part A?",
-        longChoices: true,
-        choices: [
-          "\"It is a sound nobody can make up and nobody can fake, because the tree has to answer back.\"",
-          "\"And that is why, to this day, you will not hear a woodpecker call a warning across a valley.\"",
-          "\"Squirrel was given nothing at all, which is what she asked for.\"",
-          "\"She only asked that the warning belong to whoever actually looked.\""
+        q: "Click the sentence from the paragraphs above that **best** supports the answer in Part A.",
+        paras: [
+          ["Woodpecker did not argue with her."],
+          ["So they took the ringing call away from him, and what they left him was his beak and the hard trunk of a tree."],
+          ["And that is why, to this day, you will not hear a woodpecker call a warning across a valley.",
+           "You will hear him knocking, over and over, on wood.",
+           "It is a sound nobody can make up and nobody can fake, because the tree has to answer back."],
+          ["Squirrel was given nothing at all, which is what she asked for.",
+           "She only asked that the warning belong to whoever actually looked."]
         ],
-        answer: "\"It is a sound nobody can make up and nobody can fake, because the tree has to answer back.\"",
-        explanation: "This is the sentence that explains WHY the new sound fits the crime — it cannot be faked. Losing the call tells you he was punished; only this line tells you the punishment was matched to what he did wrong." } }
+        answer: "It is a sound nobody can make up and nobody can fake, because the tree has to answer back.",
+        explanation: "This sentence tells you that the knock cannot be faked, because the tree has to answer back. A sound that cannot be faked is a sound you can trust. The other sentences tell that Woodpecker did not argue, what he lost, what his new sound is, and what Squirrel asked for. None of them says whether the sound can be faked." } }
 
   ]
 };
